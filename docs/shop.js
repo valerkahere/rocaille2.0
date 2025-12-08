@@ -12,3 +12,4 @@ function displayPrice(locale) {
 
 displayPrice("IR");
 
+// decide the styling for cards with sample data

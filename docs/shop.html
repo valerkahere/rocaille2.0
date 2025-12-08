@@ -1,14 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rocaille</title>
 
+    <!-- First Bootstrap, then Custom CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="/docs/styles/styles.css">
 </head>
+
 <body>
     <h1>SHOP</h1>
-    <script src="shop.js"></script>
+    <div id="product-catalogue">
+        <div class="card">
+            <!-- card-body adds padding for the card -->
+            <div class="card-body">
+                <!-- card-img-top - sized properly and sticks to the top -->
+                <img src="/assets/products/axolotlMain.webp" alt="" class="card-img-top">
+                <!-- Can be any h -->
+                <h5 class="card-title">
+                    Petite Pink & Black Chihuahua Beaded Keychain
+                </h5>
+                <p class="card-text">
+                    Meet your new best friend! This exquisitely detailed chihuahua keychain is handcrafted from hundreds
+                    of high-quality rocaille beads, capturing the breed's iconic perky ears and expressive eyes. Woven
+                    using a sturdy amigurumi technique, this durable 3D charm is perfect for adding a touch of
+                    personality to your keys, purse, or backpack. A wonderful gift for any dog lover who appreciates
+                    fine craftsmanship and unique design.
+                </p>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Card Example for reference -->
+    <div class="container">
+        <div class="card">
+            <div class="border-2 border-success border-opacity-50 rounded">
+                <img src="/assets/products/axolotlMain.webp" alt="" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Petite Pink & Black Chihuahua Beaded Keychain</h5>
+                    <p class="card-text">Meet your new best friend! This exquisitely detailed chihuahua keychain is handcrafted from hundreds
+                    of high-quality rocaille beads, capturing the breed's iconic perky ears and expressive eyes. Woven
+                    using a sturdy amigurumi technique, this durable 3D charm is perfect for adding a touch of
+                    personality to your keys, purse, or backpack. A wonderful gift for any dog lover who appreciates
+                    fine craftsmanship and unique design.</p>
+                    <p>€22</p>
+                    <a href="#" class="btn btn-primary">Add to cart</a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- First Bootstrap, then Custom JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+        <script src="shop.js"></script>
 </body>
+
 </html>
