@@ -5,6 +5,23 @@ body {
     color: var(--primary-black)
 }
 
+.cutoff-text__title {
+    --max-lines: 2;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--max-lines);
+    line-clamp: var(--max-lines); /* Standard line-clamp for compatibility */
+}
 
+
+.cutoff-text__description {
+    --max-lines: 3;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--max-lines);
+    line-clamp: var(--max-lines);
+}
 
 

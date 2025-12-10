@@ -2,8 +2,8 @@
 const rowClassList = 'row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 justify-content-center my-1';
 const cardClassList = 'card h-100'; // h-100 makes tthem equal height!
 const cardBodyClassList = 'card-body vstack gap-1'; // vstack is shorthand for d-flex flex-column - vertical flex column
-const cardTitleClassList = 'card-title';
-const cardTextClassList = 'card-subtitle'; // controlling line clamping through CSS
+const cardTitleClassList = 'card-title cutoff-text__title'; // cutoff-text - custom CSS class for controlling how many lines of text shown (alternative to JS substring)
+const cardTextClassList = 'card-subtitle cutoff-text__description';
 const smallTextClassList = 'text-body-secondary';
 const buttonClassList = 'btn btn-primary mt-auto'; // margin-top auto makes sure buttons are aligned in the bottom
 
@@ -88,7 +88,7 @@ function renderCards(data, catalogueContainer, row) {
       }
 
       if (typeof(product.description) !== 'undefined' && product.description.length !== 0 && product.description !== "unknown") {
-        cardText.textContent = `${product.description.substring(0, 50)}...`;
+        cardText.textContent = product.description;
       }
 
       if (typeof(product.price) !== 'undefined' && product.price.length !== 0 && product.price !== "unknown") {
