@@ -36,7 +36,8 @@
         } else {
             loggingStatus.textContent = "Login";
             userDetailsEl.href = "/docs/login.html";
-            userDetailsEl.style.display = 'none';
+            userDetailsEl.classList.remove('d-show');
+            userDetailsEl.classList.add('d-none');
         } 
 
     }
