@@ -1,6 +1,7 @@
 // Declaring class lists for styling
 const rowClassList = 'row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 justify-content-center my-1';
-const cardClassList = 'card d-flex flex-column';
+const cardClassList = 'card h-100'; // h-100 makes them equal height!
+const cardBodyClassList = 'card-body d-flex flex-column';
 const cardTitleClassList = 'card-title';
 const cardTextClassList = 'card-subtitle'; // controlling line clamping through CSS
 const buttonClassList = 'btn btn-primary mt-auto'; // margin-top auto makes sure buttons are aligned in the bottom
@@ -50,7 +51,7 @@ function renderCards(data, catalogueContainer, row) {
       ApplyStyles(card, cardClassList);
 
       const cardBody = document.createElement('div');
-      cardBody.classList.add('card-body');
+      ApplyStyles(cardBody, cardBodyClassList);
 
       const image = document.createElement('img');
       image.classList.add('card-img-top');
