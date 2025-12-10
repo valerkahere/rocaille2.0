@@ -2,110 +2,119 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rocaille</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rocaille</title>
 
-    <!-- First Bootstrap, then Custom CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="/docs/styles/styles.css">
+  <!-- First Bootstrap, then Custom CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="/docs/styles/styles.css">
 </head>
-<body>
-<main>
 
-  <nav>
-    <a href="index.html">Home</a>
-        <li >
-          <a href="shop.html">Shop</a>
-        </li>
-        <li >
-          <a  href="about.html">About</a>
-        </li>
-      </ul>
+<body>
+  <main>
+
+    <nav>
       <ul>
         <li>
-          <a id="userdetails" href="userdetails.html">User Details</a>
+          <a href="index.html">Home</a>
         </li>
-          <li>
-          <a  id="loginlogout" href="login.html">Login</a>
+        <li>
+          <a href="shop.html">Shop</a>
         </li>
-
+        <li>
+          <a href="about.html">About</a>
+        </li>
       </ul>
-   
-        <a  href="checkout.html">
+      <ul id="loginList">
+        <li id="loginListItem">
+          <a href="userdetails.html">User Details</a>
+        </li>
+        <li>
+          <a id="loginlogout" href="login.html">Login</a>
+        </li>
+      </ul>
+
+      <a href="checkout.html">
         <button type="button">
           Checkout <span id="checkout"></span>
         </button>
-        </a>
-    </div> 
-        
-    </div>
-  </div>
-</nav>     
-    
+      </a>
+
+
+
+
+
+      <a href="checkout.html">
+        <button type="button">
+          Checkout <span id="checkout"></span>
+        </button>
+      </a>
+
+    </nav>
+
     <h1>Checkout</h1>
-    <div>    
-        <div> 
-          <form name="checkout" id="user-checkout" action="" method="get">
-                <fieldset>
-                    <legend>Delivery Details</legend>
-                   
-                        <label for="getFirstName">First name</label>
-                        <input type="text"  id="getFirstName" name="firstname" value="firstname" required>
-                 
-                  
-                        <label for="getLastName">Last name</label> 
-                        <input type="text" c id="getLastName" name="lastname" value="surname" required>
-                
-                   
-                        <label for="getAddress1">Addresss</label> 
-                        <input type="text"  id="getAddress1" name="address2" value="address 1" required>
-              
-                  
-                        <label for="getAddress2">Addresss</label> 
-                        <input type="text" id="getAddress2" name="address2"  value="address 2"  required>
-                   
-                  
-                        <label for="getAddress3">Addresss</label> 
-                        <input type="text"  id="getAddress3" name="address3"  value="address 3"  required>
-                
-              
-                <fieldset>
-                    <legend>Payment Details</legend>
+    <div>
+      <div>
+        <form name="checkout" id="user-checkout" action="" method="get">
+          <fieldset>
+            <legend>Delivery Details</legend>
 
-                        <label for="getCardName">Card Name</label> 
-                        <input type="text" id="cardName" name="cardname" value="MR FIRSTNAME SURNAME" required>
-             
-                        <label for="getCardNumber">Card Number</label> 
-                        <input type="text" id="cardNumber" name="cardNumber" value="1234 5678 9102 3456" required>
-                   
-                        <label for="getCardCVC">CVC</label> 
-                        <input type="password" " id="cardCvv" name="cardCvv"  required>
-                </fieldset>    
-                <div id="payment-success" role="alert">
-                    Thank you for your purchase. You will receive delivery details via email. Please return to our <a href="shop.html">Shopping Page</a>.
-                </div>
-                <div  id="payment-failure" role="alert">
-                  There seems to be a problem with the card details you entered.
-                </div>                
-                <div>
-                    <input type='submit' class="btn btn-primary" id="buy-now" name="buy-now" value="Buy Now">
-                </div>
-            </form>
+            <label for="getFirstName">First name</label>
+            <input type="text" id="getFirstName" name="firstname" value="firstname" required>
 
 
-        </div> 
-    </div>   
-    
+            <label for="getLastName">Last name</label>
+            <input type="text" c id="getLastName" name="lastname" value="surname" required>
 
-    
-</main>
-<script src="/docs/js/custom.js"></script> 
-<script src="/docs/js/checkout.js"></script> 
+
+            <label for="getAddress1">Addresss</label>
+            <input type="text" id="getAddress1" name="address2" value="address 1" required>
+
+
+            <label for="getAddress2">Addresss</label>
+            <input type="text" id="getAddress2" name="address2" value="address 2" required>
+
+
+            <label for="getAddress3">Addresss</label>
+            <input type="text" id="getAddress3" name="address3" value="address 3" required>
+
+
+            <fieldset>
+              <legend>Payment Details</legend>
+
+              <label for="getCardName">Card Name</label>
+              <input type="text" id="cardName" name="cardname" value="MR FIRSTNAME SURNAME" required>
+
+              <label for="getCardNumber">Card Number</label>
+              <input type="text" id="cardNumber" name="cardNumber" value="1234 5678 9102 3456" required>
+
+              <label for="getCardCVC">CVC</label>
+              <input type="password" " id=" cardCvv" name="cardCvv" required>
+            </fieldset>
+            <div id="payment-success" role="alert">
+              Thank you for your purchase. You will receive delivery details via email. Please return to our <a
+                href="shop.html">Shopping Page</a>.
+            </div>
+            <div id="payment-failure" role="alert">
+              There seems to be a problem with the card details you entered.
+            </div>
+            <div>
+              <input type='submit' class="btn btn-primary" id="buy-now" name="buy-now" value="Buy Now">
+            </div>
+        </form>
+
+
+      </div>
+    </div>
+
+
+
+  </main>
+  <script src="/docs/js/custom.js"></script>
+  <script src="/docs/js/checkout.js"></script>
 
 </body>
+
 </html>
-
-
-

@@ -2,79 +2,83 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rocaille</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rocaille</title>
 
-    <!-- First Bootstrap, then Custom CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="/docs/styles/styles.css">
+  <!-- First Bootstrap, then Custom CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="/docs/styles/styles.css">
 </head>
-<body>
-<main>
 
-  <nav>
-    <a  href="index.html">Home</a>
-        <li >
-          <a href="shop.html">Shop</a>
-        </li>
-        <li >
-          <a  href="about.html">About</a>
-        </li>
-      </ul>
+<body>
+  <main>
+
+    <nav>
       <ul>
         <li>
-          <a id="userdetails" href="userdetails.html">User Details</a>
+          <a href="index.html">Home</a>
         </li>
-          <li>
-          <a  id="loginlogout" href="login.html">Login</a>
+        <li>
+          <a href="shop.html">Shop</a>
         </li>
-
+        <li>
+          <a href="about.html">About</a>
+        </li>
       </ul>
-        <a href="checkout.html">
+      <ul id="loginList">
+        <li id="loginListItem">
+          <a href="userdetails.html">User Details</a>
+        </li>
+        <li>
+          <a id="loginlogout" href="login.html">Login</a>
+        </li>
+      </ul>
+
+      <a href="checkout.html">
         <button type="button">
           Checkout <span id="checkout"></span>
         </button>
-        </a>
-    </div> 
-        
-    </div>
-  </div>
-</nav>    
-    
+      </a>
+
+
+    </nav>
+
+
+
+
     <h1>Login</h1>
-    <div>    
-        <div class="col-sm col-md-4">
-            <div role="alert" id="loginerror">The username or password you entered is incorrect. <a href="">Forgot your password?</a></div>    
-            <form name="login" id="user-login" method="get">
-                <div class="form-group">
-                    <label for="emailAddressID">Email address</label>
-                    <input type="email" class="form-control" id="emailAddressID" name="email" required>
-                </div>
-                <div >
-                    <label for="passwordID">Password</label> 
-                    <input type="password" class="form-control" id="passwordID" name="password" required>
-                </div>    
-                <div>
-                    <input type="submit" class="btn btn-primary" value="Login">
-                </div>
-            </form>
-            <p> <a href="#">Need to Register?</a></p>
+    <div>
+      <div class="col-sm col-md-4">
+        <div role="alert" id="loginerror">The username or password you entered is incorrect. <a href="">Forgot your
+            password?</a></div>
+        <form name="login" id="user-login" method="get">
+          <div class="form-group">
+            <label for="emailAddressID">Email address</label>
+            <input type="email" class="form-control" id="emailAddressID" name="email" required>
+          </div>
+          <div>
+            <label for="passwordID">Password</label>
+            <input type="password" class="form-control" id="passwordID" name="password" required>
+          </div>
+          <div>
+            <input type="submit" class="btn btn-primary" value="Login">
+          </div>
+        </form>
+        <p> <a href="#">Need to Register?</a></p>
 
-        </div> 
-    </div>   
-    
+      </div>
+    </div>
 
 
-</main>
 
-    <script src="/docs/js/custom.js"></script>   
-    <script src="/docs/js/login.js"></script>       
+  </main>
 
-    
+  <script src="/docs/js/custom.js"></script>
+  <script src="/docs/js/login.js"></script>
+
+
 </body>
+
 </html>
-
-
-

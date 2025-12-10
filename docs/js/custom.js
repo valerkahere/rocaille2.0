@@ -1,7 +1,11 @@
 (() => {
     let loggingStatus = document.getElementById('loginlogout');
     let isLoggedIn = localStorage.getItem('loggedIn');
-    let userDetailsEl = document.getElementById('userdetails');
+    // This is <ul> which wraps <li>
+    let loginList = document.getElementById('loginList');
+ 
+    // This is the <li> which wraps <a> with text User Details
+    let loginListItem = document.getElementById('loginListItem')
     // check if user is logged in or logged out..
     checkLoginStatus()
 
@@ -27,17 +31,20 @@
         }
 
         
-
-        if (isLoggedIn === '1') {
+        
+        if (isLoggedIn === '1' ) {
             // change the text from Login to Logout
             loggingStatus.textContent = 'Logout';
-            userDetailsEl.classList.remove('d-none');
-            userDetailsEl.classList.add('d-show');
+            loginList.appendChild(loginListItem);
         } else {
-            loggingStatus.textContent = "Login";
-            userDetailsEl.href = "/docs/login.html";
-            userDetailsEl.classList.remove('d-show');
-            userDetailsEl.classList.add('d-none');
+            loggingStatus.textContent = 'Login';
+            // Removing the <li> - the "bullet" from the list together with its contents
+            // ONLY IF <ul> does not have <li> removed ALREADY
+            
+            loginList.removeChild(loginListItem);
+
+
+            
         } 
 
     }
