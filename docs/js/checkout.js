@@ -25,6 +25,7 @@
             let total = 0;
             // makes sure that when we go to another page the total is zero 
             localStorage.setItem('checkout', total); 
+            document.querySelector('#checkout').textContent = total;
 
         } else {
             showPFailure();
