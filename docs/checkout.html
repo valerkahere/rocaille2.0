@@ -46,7 +46,6 @@
     </nav>
 
     <h1>Checkout</h1>
-    <div>
       <div>
         <form name="checkout" id="user-checkout" action="" method="get">
           <fieldset>
@@ -82,23 +81,22 @@
               <input type="text" id="cardNumber" name="cardNumber" value="1234 5678 9102 3456" required>
 
               <label for="getCardCVC">CVC</label>
-              <input type="password" " id=" cardCvv" name="cardCvv" required>
+              <input type="password" id="cardCvv" name="cardCvv" required>
             </fieldset>
-            <div id="payment-success" role="alert">
+            <p id="payment-success" class="text-bg-success" role="alert">
               Thank you for your purchase. You will receive delivery details via email. Please return to our <a
                 href="shop.html">Shopping Page</a>.
-            </div>
-            <div id="payment-failure" role="alert">
-              There seems to be a problem with the card details you entered.
-            </div>
+            </p>
+            <p id="payment-failure" class="text-bg-warning" role="alert">
+              Please enter correct card details
+            </p>
             <div>
-              <input type='submit' class="btn btn-primary" id="buy-now" name="buy-now" value="Buy Now">
+              <input type="submit" class="btn btn-primary" id="buy-now" name="buy-now" value="Buy Now">
             </div>
         </form>
 
 
       </div>
-    </div>
 
 
 
