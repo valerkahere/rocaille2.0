@@ -1,50 +1,38 @@
 // Declaring class lists for styling
-const rowClassList = 'row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center my-2';
-const cardClassList = 'card border border-0 d-flex flex-column';
+const rowClassList = 'row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 justify-content-center my-1';
+const cardClassList = 'card d-flex flex-column';
 const cardTitleClassList = 'card-title';
 const cardTextClassList = 'card-subtitle'; // controlling line clamping through CSS
 const buttonClassList = 'btn btn-primary mt-auto'; // margin-top auto makes sure buttons are aligned in the bottom
 
 
-
-const currencyStyling = {
-  style: 'currency',
-  currency: 'EUR'
-};
-const price = 22;
-
-function displayPrice(locale) {
-    console.log(
-        `${new Intl.NumberFormat((locale), currencyStyling).format(price)}`
-    );
-}
-
-displayPrice("IR");
-
 // Loading JSON data from a local file (just like from as external API)
 // using async IIFE function 
 (async () => {
-  try {
-    // The container where the results will be displayed
+    try {
+      // The container where the results will be displayed
     const catalogueContainer = document.getElementById('product-catalogue');
 
-    // This is the "row" for bootstrap "columns", defines layout and centering
-    const row = document.createElement('div');
+      // This is the "row" for bootstrap "columns", defines layout and centering
+      const row = document.createElement('div');
 
-    // Cleaning the variables
-    catalogueContainer.textContent = '';
-    row.textContent = '';
+      // Cleaning the variables
+      catalogueContainer.textContent = '';
+      row.textContent = '';
 
+      
+
+      const response = await fetch('/assets/products.json');
+      const data = await response.json();
+      console.log(data.products);
+      renderCards(data, catalogueContainer, row);
+    } catch (error) {
+      console.error(`Could not load products: ${error}`);
+    }
     
-
-    const response = await fetch('/assets/products.json');
-    const data = await response.json();
-    console.log(data.products);
-    renderCards(data, catalogueContainer, row);
     
-  } catch(error) {
-    console.error(`Could not load products: ${error}`);
-  }
+  
+  
 })();
 
 function renderCards(data, catalogueContainer, row) {
@@ -78,22 +66,35 @@ function renderCards(data, catalogueContainer, row) {
       cardButton.textContent = "Add to cart";
       ApplyStyles(cardButton, buttonClassList);
 
+      const cardPrice = document.createElement('p');
+      ApplyStyles(cardPrice, cardTextClassList);
+
+
 
       // 2) Then, assigning (populating) appropriate values from data to elements - including error handling for all properties
-      if (typeof(product.img) !== 'undefined') {
+      if (typeof(product.img) !== 'undefined' && product.img.length !== 0 && product.img !== "unknown") {
         image.src = product.img;
       }
 
-      if (typeof(product.alt) !== 'undefined') {
+      if (typeof(product.alt) !== 'undefined' && product.alt.length !== 0 && product.alt !== "unknown") {
         image.alt = product.alt;
       }
 
-      if (typeof(product.productName) !== 'undefined') {
+      if (typeof(product.productName) !== 'undefined' && product.productName.length !== 0 && product.productName !== "unknown") {
         cardTitle.textContent = product.productName;
       }
 
-      if (typeof(product.description) !== 'undefined') {
-        cardText.textContent = product.description.substring(0, 100);
+      if (typeof(product.description) !== 'undefined' && product.description.length !== 0 && product.description !== "unknown") {
+        cardText.textContent = `${product.description.substring(0, 50)}...`;
+      }
+
+      if (typeof(product.price) !== 'undefined' && product.price.length !== 0 && product.price !== "unknown") {
+        if (product.currency === "EUR" && typeof(product.currency) !== 'undefined' && product.currency.length !== 0 && product.currency !== "unknown") {
+            cardPrice.textContent = `${new Intl.NumberFormat(("IR"), {
+            style: 'currency',
+            currency: 'EUR'
+          }).format(product.price)}` // formatting appropriately for Irish market ONLY if appropriate product currency parameter is present
+        }
       }
 
 
@@ -104,6 +105,7 @@ function renderCards(data, catalogueContainer, row) {
       cardBody.appendChild(image);
       cardBody.appendChild(cardTitle);
       cardBody.appendChild(cardText);
+      cardBody.appendChild(cardPrice);
       cardBody.appendChild(cardButton);
   });
 
