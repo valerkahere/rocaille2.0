@@ -5,7 +5,7 @@ const cardBodyClassList = 'card-body vstack gap-1'; // vstack is shorthand for d
 const cardTitleClassList = 'card-title cutoff-text__title'; // cutoff-text - custom CSS class for controlling how many lines of text shown (alternative to JS substring)
 const cardTextClassList = 'card-subtitle cutoff-text__description';
 const smallTextClassList = 'text-body-secondary';
-const buttonClassList = 'btn btn-primary mt-auto'; // margin-top auto makes sure buttons are aligned in the bottom
+const buttonClassList = 'btn btn-primary mt-auto add-to-cart'; // margin-top auto makes sure buttons are aligned in the bottom. add-to-cart is a custom class to target all cards buttons
 
 
 
@@ -14,7 +14,7 @@ const buttonClassList = 'btn btn-primary mt-auto'; // margin-top auto makes sure
 (async () => {
     try {
       // The container where the results will be displayed
-    const catalogueContainer = document.getElementById('product-catalogue');
+      const catalogueContainer = document.getElementById('product-catalogue');
 
       // This is the "row" for bootstrap "columns", defines layout and centering
       const row = document.createElement('div');
@@ -27,8 +27,15 @@ const buttonClassList = 'btn btn-primary mt-auto'; // margin-top auto makes sure
 
       const response = await fetch('/assets/products.json');
       const data = await response.json();
-      console.log(data.products);
+
       renderCards(data, catalogueContainer, row);
+
+      // Now after cards are rendered, make sure all "add to carts" are counted
+      let buttons = document.querySelectorAll('button.add-to-cart');
+      buttons.forEach(button => {
+        button.addEventListener('click', addItem);
+      });
+
     } catch (error) {
       console.error(`Could not load products: ${error}`);
     }
@@ -37,6 +44,13 @@ const buttonClassList = 'btn btn-primary mt-auto'; // margin-top auto makes sure
   
   
 })();
+
+function addItem() {
+  let total = localStorage.getItem('checkout');
+  total++
+  localStorage.setItem('checkout', total);
+  document.getElementById('checkout').textContent = total;
+}
 
 function renderCards(data, catalogueContainer, row) {
   

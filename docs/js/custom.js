@@ -10,7 +10,7 @@
     checkLoginStatus()
 
     // set the checkout figure
-    if ((typeof(localStorage.getItem('checkout')) !== 'undefined' && localStorage.getItem('checkout').length !== 0 && localStorage.getItem('checkout') !== "unknown" && localStorage.getItem('checkout') !== 'null')) {  
+    if (localStorage.getItem('checkout') === null) {  
         localStorage.setItem('checkout', 0);
     }
     let checkout = localStorage.getItem('checkout');
