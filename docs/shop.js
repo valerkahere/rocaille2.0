@@ -1,10 +1,12 @@
 // Declaring class lists for styling
 const rowClassList = 'row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 justify-content-center my-1';
-const cardClassList = 'card h-100'; // h-100 makes them equal height!
-const cardBodyClassList = 'card-body d-flex flex-column';
+const cardClassList = 'card h-100'; // h-100 makes tthem equal height!
+const cardBodyClassList = 'card-body vstack gap-1'; // vstack is shorthand for d-flex flex-column - vertical flex column
 const cardTitleClassList = 'card-title';
 const cardTextClassList = 'card-subtitle'; // controlling line clamping through CSS
+const smallTextClassList = 'text-body-secondary';
 const buttonClassList = 'btn btn-primary mt-auto'; // margin-top auto makes sure buttons are aligned in the bottom
+
 
 
 // Loading JSON data from a local file (just like from as external API)
@@ -67,8 +69,8 @@ function renderCards(data, catalogueContainer, row) {
       cardButton.textContent = "Add to cart";
       ApplyStyles(cardButton, buttonClassList);
 
-      const cardPrice = document.createElement('p');
-      ApplyStyles(cardPrice, cardTextClassList);
+      const cardPrice = document.createElement('small');
+      ApplyStyles(cardPrice, smallTextClassList);
 
 
 
