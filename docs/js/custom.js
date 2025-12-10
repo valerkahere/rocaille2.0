@@ -1,6 +1,7 @@
 (() => {
     let loggingStatus = document.getElementById('loginlogout');
     let isLoggedIn = localStorage.getItem('loggedIn');
+    let userDetailsEl = document.getElementById('userdetails');
     // check if user is logged in or logged out..
     checkLoginStatus()
 
@@ -26,20 +27,15 @@
         }
 
         
-        let userDetailsEl = document.getElementById('userdetails');
+
         if (isLoggedIn === '1') {
             // change the text from Login to Logout
             loggingStatus.textContent = 'Logout';
             userDetailsEl.classList.remove('d-none');
             userDetailsEl.classList.add('d-show');
         } else {
-            // use add to hide the display of User Details
-            //userDetailsEl.classList.add("d-none");
-            //userDetailsEl.classList.remove("d-show");
-            document.querySelector('#loginlogout').textContent = "Login";
-            userDetailsEl = document.getElementById("loginlogout");
-            userDetailsEl.setAttribute("href", "login.html");
-            userDetailsEl = document.getElementById("userdetails");
+            loggingStatus.textContent = "Login";
+            userDetailsEl.href = "/docs/login.html";
             userDetailsEl.style.display = 'none';
         } 
 
