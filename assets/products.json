@@ -1,116 +1,144 @@
 {
-  "products": [
-    {
-      "id": 1,
-      "shortName": "Chihuahua",
-      "productName": "Petite Pink & Black Chihuahua Beaded Keychain",
-      "price": 22.00,
-      "currency": "EUR",
-      "description": "Meet your new best friend! This exquisitely detailed chihuahua keychain is handcrafted from hundreds of high-quality rocaille beads, capturing the breed's iconic perky ears and expressive eyes. Woven using a sturdy amigurumi technique, this durable 3D charm is perfect for adding a touch of personality to your keys, purse, or backpack. A wonderful gift for any dog lover who appreciates fine craftsmanship and unique design."
-    },
-    {
-      "id": 2,
-      "shortName": "Shark",
-      "productName": "Playful Pink Shark Beaded Keychain",
-      "price": 20.00,
-      "currency": "EUR",
-      "description": "Make a splash with this adorable pink shark keychain! Featuring a charmingly rounded body, a happy little smile, and a fun, fluked tail, this piece is expertly woven from high-quality rocaille beads. The amigurumi technique ensures it is both sturdy and squeezably cute. It’s an ocean of fun in one tiny, beautifully crafted accessory."
-    },
-    {
-      "id": 3,
-      "shortName": "Raccoon",
-      "productName": "Rascal Raccoon Beaded Keychain",
-      "price": 20.00,
-      "currency": "EUR",
-      "description": "Clever, curious, and cute as a button! This beaded raccoon keychain features the animal's iconic black-and-white mask and striped tail. Meticulously handcrafted using a sturdy 3D amigurumi weave, this little rascal is ready to guard your keys or add a touch of woodland charm to your favorite bag. A unique and expertly made accessory for any animal lover."
-    },
-    {
-      "id": 4,
-      "shortName": "Beagle",
-      "productName": "Lovable Beagle Pup Beaded Keychain",
-      "price": 22.00,
-      "currency": "EUR",
-      "description": "With floppy ears and an ever-hopeful expression, our beagle pup keychain is guaranteed to melt your heart. The rich brown, white, and black rocaille beads are expertly woven in the amigurumi style to capture the playful and loving spirit of the breed. This durable and delightful charm is the perfect way to honor your furry friend."
-    },
-    {
-      "id": 5,
-      "shortName": "Minion",
-      "productName": "Mischievous Minion Beaded Keychain",
-      "price": 25.00,
-      "currency": "EUR",
-      "description": "Bello! Assemble your tribe with these instantly recognizable and beloved Minion keychains. Crafted from bright yellow and blue beads, complete with their signature goggles, each charm is a testament to detailed craftsmanship. Woven in the durable amigurumi style, they are ready for any adventure you embark on. A fantastically fun accessory for fans of the franchise."
-    },
-    {
-      "id": 6,
-      "shortName": "Lion",
-      "productName": "Little Lion King Beaded Keychain",
-      "price": 24.00,
-      "currency": "EUR",
-      "description": "Rule your day with the heart of a lion! This majestic, yet adorable, lion keychain features a magnificent mane of brown and amber rocaille beads and a sweet, determined face. The complex, three-dimensional beading creates a premium, artisanal feel. It’s a small but mighty accessory that symbolizes courage and strength."
-    },
-    {
-      "id": 7,
-      "shortName": "Grey Cat",
-      "productName": "Ash Gray Kitten Beaded Keychain",
-      "price": 22.00,
-      "currency": "EUR",
-      "description": "Pure sweetness in the palm of your hand. This lovely gray kitten keychain features soft, ash-colored rocaille beads with delicate pink accents on its ears and paws. Every bead is woven with care using our signature amigurumi technique to create a perfectly shaped, durable charm that cat lovers will instantly adore. It’s the purr-fect accessory!"
-    },
-    {
-      "id": 8,
-      "shortName": "Axolotl",
-      "productName": "Adorable Axolotl Beaded Keychain",
-      "price": 20.00,
-      "currency": "EUR",
-      "description": "Dive into delightful detail with our handcrafted Axolotl keychain. Inspired by the world's most charming amphibian, this piece features vibrant pink beads and intricately designed gills. Created with the durable amigurumi beading method, its quality is as exceptional as its cuteness. Attach this smiling salamander to your belongings for a splash of joy and a guaranteed conversation starter."
-    },
-    {
-      "id": 9,
-      "shortName": "Skunk",
-      "productName": "Mischievous Skunk Beaded Keychain",
-      "price": 20.00,
-      "currency": "EUR",
-      "description": "Add a touch of woodland whimsy to your life with our charming beaded skunk. This keychain features a beautiful contrast of jet-black and snow-white rocaille beads, perfectly shaped to create its playful, curious personality. Each bead is woven with precision using the amigurumi technique, ensuring a high-quality accessory that's built to last. It’s the cutest skunk you'll ever meet!"
-    },
-    {
-      "id": 10,
-      "shortName": "Honeybee",
-      "productName": "Golden Honeybee Beaded Keychain",
-      "price": 18.00,
-      "currency": "EUR",
-      "description": "Let your style take flight with our adorable golden honeybee keychain. Made with sunny yellow and rich black beads, this little worker bee is buzzing with personality. The amigurumi-style construction creates a delightful, rounded shape that feels great to the touch and is resilient enough for daily adventures. A sweet and cheerful accessory to brighten your day."
-    },
-    {
-      "id": 11,
-      "shortName": "Bumblebee",
-      "productName": "Sunny Day Bumblebee Beaded Keychain",
-      "price": 18.00,
-      "currency": "EUR",
-      "description": "Buzzing with artisanal charm, our sunny day bumblebee keychain is a tiny treasure. Each bead, from the vibrant yellow body to the delicate wings, is meticulously woven to create a cheerful and durable accessory. Made with the amigurumi technique for a premium finish, this bee is ready to bring a little sunshine to your keys or bag."
-    },
-    {
-      "id": 12,
-      "shortName": "Bunny",
-      "productName": "Cotton-Tail Pink Bunny Beaded Keychain",
-      "price": 22.00,
-      "currency": "EUR",
-      "description": "Hop into happiness with our sweet-as-can-be pink bunny keychain. With its long, floppy ears and a cute white chest, this little friend is meticulously crafted from hundreds of rocaille beads. The strong, three-dimensional amigurumi weave ensures this bunny will be your cherished companion for years to come. A perfect accessory for springtime or anytime you need a dose of cute."
-    },
-    {
-      "id": 13,
-      "shortName": "Sea Dragon",
-      "productName": "Dreamy Pastel Sea Dragon Beaded Keychain",
-      "price": 22.00,
-      "currency": "EUR",
-      "description": "Cuddle up with this enchanting pastel Sea Dragon keychain. The beautiful blend of periwinkle, lavender, and pink beads creates a dreamy, ethereal look unlike any other. Designed with the signature Rocaille Shop amigurumi technique, this sturdy and lovable charm is perfect for anyone who loves unique color palettes and adorable animal companions."
-    },
-    {
-      "id": 14,
-      "shortName": "Flamingo",
-      "productName": "Flamboyant Flamingo Beaded Keychain",
-      "price": 20.00,
-      "currency": "EUR",
-      "description": "Stand tall and stand out with our fabulous flamingo keychain. This vibrant pink charm is all legs and personality, handcrafted using a 3D amigurumi weave that brings its quirky shape to life. From its signature curved neck to its long, beaded legs, it’s a fun, tropical accessory that will add a pop of color and personality wherever you go."
-    }
-  ]
+   "products":[
+      {
+         "id":1,
+         "shortName":"Chihuahua",
+         "productName":"Petite Pink & Black Chihuahua Beaded Keychain",
+         "price":22.00,
+         "currency":"EUR",
+         "description":"Meet your new best friend! This exquisitely detailed chihuahua keychain is handcrafted from hundreds of high-quality rocaille beads, capturing the breed's iconic perky ears and expressive eyes. Woven using a sturdy amigurumi technique, this durable 3D charm is perfect for adding a touch of personality to your keys, purse, or backpack. A wonderful gift for any dog lover who appreciates fine craftsmanship and unique design.",
+         "img":"/assets/products/сhihuahuaFront.webp",
+         "alt":"Front view of a handcrafted beaded chihuahua keychain in black and pink"
+      },
+      {
+         "id":2,
+         "shortName":"Shark",
+         "productName":"Playful Pink Shark Beaded Keychain",
+         "price":20.00,
+         "currency":"EUR",
+         "description":"Make a splash with this adorable pink shark keychain! Featuring a charmingly rounded body, a happy little smile, and a fun, fluked tail, this piece is expertly woven from high-quality rocaille beads. The amigurumi technique ensures it is both sturdy and squeezably cute. It's an ocean of fun in one tiny, beautifully crafted accessory.",
+         "img":"/assets/products/shark.webp",
+         "alt":"Pink beaded shark keychain with a rounded body and cute smile resting on stone"
+      },
+      {
+         "id":3,
+         "shortName":"Raccoon",
+         "productName":"Rascal Raccoon Beaded Keychain",
+         "price":20.00,
+         "currency":"EUR",
+         "description":"Clever, curious, and cute as a button! This beaded raccoon keychain features the animal's iconic black-and-white mask and striped tail. Meticulously handcrafted using a sturdy 3D amigurumi weave, this little rascal is ready to guard your keys or add a touch of woodland charm to your favorite bag. A unique and expertly made accessory for any animal lover.",
+         "img":"/assets/products/raccoonFront.webp",
+         "alt":"Grey and white beaded raccoon keychain with black eye mask details"
+      },
+      {
+         "id":4,
+         "shortName":"Beagle",
+         "productName":"Lovable Beagle Pup Beaded Keychain",
+         "price":22.00,
+         "currency":"EUR",
+         "description":"With floppy ears and an ever-hopeful expression, our beagle pup keychain is guaranteed to melt your heart. The rich brown, white, and black rocaille beads are expertly woven in the amigurumi style to capture the playful and loving spirit of the breed. This durable and delightful charm is the perfect way to honor your furry friend.",
+         "img":"/assets/products/puppyFront.webp",
+         "alt":"Brown and white beaded beagle puppy keychain with floppy ears"
+      },
+      {
+         "id":5,
+         "shortName":"Minion",
+         "productName":"Mischievous Minion Beaded Keychain",
+         "price":25.00,
+         "currency":"EUR",
+         "description":"Bello! Assemble your tribe with these instantly recognizable and beloved Minion keychains. Crafted from bright yellow and blue beads, complete with their signature goggles, each charm is a testament to detailed craftsmanship. Woven in the durable amigurumi style, they are ready for any adventure you embark on. A fantastically fun accessory for fans of the franchise.",
+         "img":"/assets/products/minions.webp",
+         "alt":"Two yellow and blue beaded minion keychains holding hands"
+      },
+      {
+         "id":6,
+         "shortName":"Lion",
+         "productName":"Little Lion King Beaded Keychain",
+         "price":24.00,
+         "currency":"EUR",
+         "description":"Rule your day with the heart of a lion! This majestic, yet adorable, lion keychain features a magnificent mane of brown and amber rocaille beads and a sweet, determined face. The complex, three-dimensional beading creates a premium, artisanal feel. It's a small but mighty accessory that symbolizes courage and strength.",
+         "img":"/assets/products/lionFront.webp",
+         "alt":"Golden beaded lion keychain with a brown mane and white paws"
+      },
+      {
+         "id":7,
+         "shortName":"Grey Cat",
+         "productName":"Ash Gray Kitten Beaded Keychain",
+         "price":22.00,
+         "currency":"EUR",
+         "description":"Pure sweetness in the palm of your hand. This lovely gray kitten keychain features soft, ash-colored rocaille beads with delicate pink accents on its ears and paws. Every bead is woven with care using our signature amigurumi technique to create a perfectly shaped, durable charm that cat lovers will instantly adore. It's the purr-fect accessory!",
+         "img":"/assets/products/greyCatFront.webp",
+         "alt":"Grey beaded kitten keychain with pink ears and paws"
+      },
+      {
+         "id":8,
+         "shortName":"Axolotl",
+         "productName":"Adorable Axolotl Beaded Keychain",
+         "price":20.00,
+         "currency":"EUR",
+         "description":"Dive into delightful detail with our handcrafted Axolotl keychain. Inspired by the world's most charming amphibian, this piece features vibrant pink beads and intricately designed gills. Created with the durable amigurumi beading method, its quality is as exceptional as its cuteness. Attach this smiling salamander to your belongings for a splash of joy and a guaranteed conversation starter.",
+         "img":"/assets/products/axolotlMain.webp",
+         "alt":"Pink beaded axolotl keychain with bright pink gills on a stone surface"
+      },
+      {
+         "id":9,
+         "shortName":"Skunk",
+         "productName":"Mischievous Skunk Beaded Keychain",
+         "price":20.00,
+         "currency":"EUR",
+         "description":"Add a touch of woodland whimsy to your life with our charming beaded skunk. This keychain features a beautiful contrast of jet-black and snow-white rocaille beads, perfectly shaped to create its playful, curious personality. Each bead is woven with precision using the amigurumi technique, ensuring a high-quality accessory that's built to last. It's the cutest skunk you'll ever meet!",
+         "img":"/assets/products/badgerFront2.webp",
+         "alt":"Black and white beaded skunk keychain with pink paws"
+      },
+      {
+         "id":10,
+         "shortName":"Honeybee",
+         "productName":"Golden Honeybee Beaded Keychain",
+         "price":18.00,
+         "currency":"EUR",
+         "description":"Let your style take flight with our adorable golden honeybee keychain. Made with sunny yellow and rich black beads, this little worker bee is buzzing with personality. The amigurumi-style construction creates a delightful, rounded shape that feels great to the touch and is resilient enough for daily adventures. A sweet and cheerful accessory to brighten your day.",
+         "img":"/assets/products/beesStreet.webp",
+         "alt":"Group of yellow and black beaded bee keychains hanging outdoors"
+      },
+      {
+         "id":11,
+         "shortName":"Bumblebee",
+         "productName":"Sunny Day Bumblebee Beaded Keychain",
+         "price":18.00,
+         "currency":"EUR",
+         "description":"Buzzing with artisanal charm, our sunny day bumblebee keychain is a tiny treasure. Each bead, from the vibrant yellow body to the delicate wings, is meticulously woven to create a cheerful and durable accessory. Made with the amigurumi technique for a premium finish, this bee is ready to bring a little sunshine to your keys or bag.",
+         "img":"/assets/products/beesHouse.webp",
+         "alt":"Close up of yellow beaded bee keychains hanging with greenery in background"
+      },
+      {
+         "id":12,
+         "shortName":"Bunny",
+         "productName":"Cotton-Tail Pink Bunny Beaded Keychain",
+         "price":22.00,
+         "currency":"EUR",
+         "description":"Hop into happiness with our sweet-as-can-be pink bunny keychain. With its long, floppy ears and a cute white chest, this little friend is meticulously crafted from hundreds of rocaille beads. The strong, three-dimensional amigurumi weave ensures this bunny will be your cherished companion for years to come. A perfect accessory for springtime or anytime you need a dose of cute.",
+         "img":"/assets/products/bunnyFront.webp",
+         "alt":"Pink beaded bunny keychain with long ears and white tummy"
+      },
+      {
+         "id":13,
+         "shortName":"Sea Dragon",
+         "productName":"Dreamy Pastel Sea Dragon Beaded Keychain",
+         "price":22.00,
+         "currency":"EUR",
+         "description":"Cuddle up with this enchanting pastel Sea Dragon keychain. The beautiful blend of periwinkle, lavender, and pink beads creates a dreamy, ethereal look unlike any other. Designed with the signature Rocaille Shop amigurumi technique, this sturdy and lovable charm is perfect for anyone who loves unique color palettes and adorable animal companions.",
+         "img":"/assets/products/dragons-purple.webp",
+         "alt":"Pastel purple and blue beaded sea dragon keychain"
+      },
+      {
+         "id":14,
+         "shortName":"Flamingo",
+         "productName":"Flamboyant Flamingo Beaded Keychain",
+         "price":20.00,
+         "currency":"EUR",
+         "description":"Stand tall and stand out with our fabulous flamingo keychain. This vibrant pink charm is all legs and personality, handcrafted using a 3D amigurumi weave that brings its quirky shape to life. From its signature curved neck to its long, beaded legs, it's a fun, tropical accessory that will add a pop of color and personality wherever you go.",
+         "img":"/assets/products/flamingoMain.webp",
+         "alt":"Pink beaded flamingo keychain with long dangling legs"
+      }
+   ]
 }

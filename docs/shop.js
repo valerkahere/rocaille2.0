@@ -12,4 +12,20 @@ function displayPrice(locale) {
 
 displayPrice("IR");
 
-// decide the styling for cards with sample data
+
+
+
+//let data = JSON.parse(products);
+//console.log(data);
+async function loadProducts() {
+  try {
+
+  } catch(error) {
+    console.error(`Could not load products: ${error}`);
+  }
+  const response = await fetch('/assets/products.json');
+  const data = await response.json();
+  console.log(data);
+}
+
+loadProducts();
