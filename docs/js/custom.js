@@ -1,5 +1,6 @@
 (() => {
     let loggingStatus = document.getElementById('loginlogout');
+    let isLoggedIn = localStorage.getItem('loggedIn');
     // check if user is logged in or logged out..
     checkLoginStatus()
 
@@ -17,16 +18,11 @@
     loggingStatus.addEventListener('click', handleLogging);
     
     function checkLoginStatus() {
-        if (localStorage.getItem('loggedIn') === '1') {
-            console.log(true);
-        } else {
-            console.log(localStorage.getItem('loggedIn'));
-        }
-
-        isLoggedIn = localStorage.getItem('loggedIn');
+        
         // If the Key does not exist, set it
         if (typeof(isLoggedIn) === 'undefined' && isLoggedIn.length === 0 && isLoggedIn === "unknown" && isLoggedIn === null) {
             localStorage.setItem('loggedIn', '0');
+            isLoggedIn = localStorage.getItem('loggedIn');
         }
 
         
@@ -40,7 +36,7 @@
             // use add to hide the display of User Details
             //userDetailsEl.classList.add("d-none");
             //userDetailsEl.classList.remove("d-show");
-            document.querySelector('#loginlogout').textContent="Login";
+            document.querySelector('#loginlogout').textContent = "Login";
             userDetailsEl = document.getElementById("loginlogout");
             userDetailsEl.setAttribute("href", "login.html");
             userDetailsEl = document.getElementById("userdetails");
@@ -52,11 +48,9 @@
     function handleLogging(event) {
         event.preventDefault();
         // if user is logged in them log them out and redirect to home page
-        let isLoggedIn = localStorage.getItem('loggedIn'); 
+        if (isLoggedIn === '1') {
+            localStorage.setItem('loggedIn', '0');
 
-        if (isLoggedIn === 1) {
-            localStorage.setItem('loggedIn', 0);
-    
             window.location.href = "index.html";
         } else {
             window.location.href = "login.html";
