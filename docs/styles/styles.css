@@ -1,10 +1,12 @@
 @font-face {
     font-family: 'Borsok';
     src: url('/assets/fonts/boorsok.woff') format('woff2'),
-         url('/assets/fonts/boorsok.otf') format('opentype'); /* fallback */
+        url('/assets/fonts/boorsok.otf') format('opentype');
+    /* fallback */
     font-weight: normal;
     font-style: normal;
-    font-display: swap; /* Improves loading performance */
+    font-display: swap;
+    /* Improves loading performance */
 }
 
 h1 {
@@ -40,50 +42,60 @@ body {
 }
 
 svg {
-    width: 3em;
+    width: 6em;
 }
 
 /* Below are custom svg classes imported from Adobe Illustrator */
 .st0 {
-    stroke-width: 6.19px;
+    stroke-width: 3.71px;
 }
 
 .st0,
 .st1,
 .st2,
-.st3,
-.st4,
-.st5 {
-    stroke: #010101;
-    stroke-miterlimit: 10;
-}
-
-.st0,
-.st1,
 .st3,
 .st4,
 .st5 {
     fill: none;
 }
 
+.st0,
+.st1,
+.st2,
+.st3,
+.st4,
+.st5,
+.st6 {
+    stroke: #010101;
+    stroke-miterlimit: 10;
+}
+
 .st1 {
-    stroke-width: 9.63px;
+    stroke-width: 6.67px;
 }
 
-.st2,
-.st4 {
-    stroke-width: 12.38px;
+.st2 {
+    stroke-width: 6.37px;
 }
 
-.st2,
+.st7 {
+    opacity: .94;
+}
+
+.st3 {
+    stroke-width: 7.73px;
+}
+
+.st8,
 .st6 {
     fill: #010101;
 }
 
-.st3 {
-    stroke-width: 16.51px;
+.st4,
+.st6 {
+    stroke-width: 4.78px;
 }
 
 .st5 {
-    stroke-width: 20.04px;
+    stroke-width: 2.39px;
 }
