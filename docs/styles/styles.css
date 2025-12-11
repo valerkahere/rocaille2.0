@@ -99,3 +99,21 @@ svg {
 .st5 {
     stroke-width: 2.39px;
 }
+
+/* 
+    overriding Bootstrap lg breakpoint
+    so that logo stays in center
+    and right nav doesn't push it to the right end
+ */
+@media(min-width: 992px) {
+    .navbar-collapse {
+        flex-grow: 0;
+    }
+
+    .navbar-brand {
+        position: absolute;
+    }
+
+
+    
+}
