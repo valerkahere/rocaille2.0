@@ -30,27 +30,54 @@ const buttonClassList = 'btn btn-primary mt-auto add-to-cart'; // margin-top aut
 
       renderCards(data, catalogueContainer, row);
 
-      // Now after cards are rendered, make sure all "add to carts" are counted
+      
+      
       let buttons = document.querySelectorAll('button.add-to-cart');
       buttons.forEach(button => {
         button.addEventListener('click', addItem);
       });
+      
+      
+
+      function addItem(event) {
+        let total = localStorage.getItem('checkout');
+        total++
+        localStorage.setItem('checkout', total);
+        document.getElementById('checkout').textContent = total;
+        
+        // Now after cards are rendered, make sure all "add to carts" are counted
+        // if the button with a certain ID was clicked
+        // save thid ID to an array
+        // save the array to localStorage
+
+        // if the array does not exist - create it
+        // otherwise use the stored value
+        if (typeof(localStorage.getItem('chosenProducts')) === 'undefined' || localStorage.getItem('chosenProducts') === null || localStorage.getItem('chosenProducts') === '') {
+          var chosenProductsNew = [];
+          chosenProductsNew.push(event.target.id);
+          localStorage.setItem('chosenProducts', chosenProductsNew.toString());
+        } else {
+          let storedChosenProducts = localStorage.getItem('chosenProducts');
+          let splitStoredChosenProducts = storedChosenProducts.split(',');
+          splitStoredChosenProducts.push(event.target.id);
+          // Updating the value with each addition
+          localStorage.setItem('chosenProducts', splitStoredChosenProducts.toString()); // must convert array to string before saving in local storage
+        }
+        
+        
+         
+        
+      }
 
     } catch (error) {
       console.error(`Could not load products: ${error}`);
     }
     
     
+
   
   
 })();
-
-function addItem() {
-  let total = localStorage.getItem('checkout');
-  total++
-  localStorage.setItem('checkout', total);
-  document.getElementById('checkout').textContent = total;
-}
 
 function renderCards(data, catalogueContainer, row) {
   
@@ -59,12 +86,14 @@ function renderCards(data, catalogueContainer, row) {
 
   // Will go through each product
   data.products.forEach(product => {
+    
       // 1) First, creating all the required elements: card, its container, contents
       const col = document.createElement('div');
       col.classList.add('col');
 
       const card = document.createElement('div');
       ApplyStyles(card, cardClassList);
+      
 
       const cardBody = document.createElement('div');
       ApplyStyles(cardBody, cardBodyClassList);
@@ -82,6 +111,7 @@ function renderCards(data, catalogueContainer, row) {
       cardButton.type = 'button';
       cardButton.textContent = "Add to cart";
       ApplyStyles(cardButton, buttonClassList);
+      cardButton.id = `${product.id}`; // assigning a product id for each button to see which ones are chosen
 
       const cardPrice = document.createElement('small');
       ApplyStyles(cardPrice, smallTextClassList);
@@ -131,6 +161,7 @@ function renderCards(data, catalogueContainer, row) {
   
 }
 
+// Helper method to apply saved styles each by each - the way .classList.add function accepts them
 function ApplyStyles(element, customClassList) {
   const splitClassList = customClassList.split(' ');
   splitClassList.forEach(className => {

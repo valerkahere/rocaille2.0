@@ -10,7 +10,7 @@
     checkLoginStatus()
 
     // set the checkout figure
-    if (localStorage.getItem('checkout') === null) {  
+    if (typeof(localStorage.getItem('checkout')) === 'undefined' || localStorage.getItem('checkout') === null) {  
         localStorage.setItem('checkout', 0);
     }
     let checkout = localStorage.getItem('checkout');
@@ -25,7 +25,7 @@
     function checkLoginStatus() {
         
         // If the Key does not exist, set it
-        if (typeof(isLoggedIn) === 'undefined' && isLoggedIn.length === 0 && isLoggedIn === "unknown" && isLoggedIn === null) {
+        if (typeof(isLoggedIn) === 'undefined' || isLoggedIn === null) {
             localStorage.setItem('loggedIn', '0');
             isLoggedIn = localStorage.getItem('loggedIn');
         }
