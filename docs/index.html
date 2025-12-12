@@ -26,32 +26,34 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid position-relative">
-                <button 
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#mainNavigation" aria-controls="mainNavigation"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div id="mainNavigation" class="collapse navbar-collapse">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/docs/index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/docs/shop.html">Shop</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/docs/about.html">Our Story</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/docs/contact.html">Contact Us</a>
-                        </li>
-                    </ul>
+            <!-- 1. Left Section (Mobile Toggler + Desktop Menu) -->
+            <div class="container-fluid navbar-grid-container">
+                <div class="d-flex align-items-center">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div id="mainNavigation" class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/docs/index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/docs/shop.html">Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/docs/about.html">Our Story</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/docs/contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+
+                <!-- 2. Center Section (Brand Logo and Name) -->
+                <!-- mx-auto is needed for mobile centering, Grid handles it on desktop -->
                 <a href="/docs/index.html" class="navbar-brand mx-auto">
                     <?xml version="1.0" encoding="UTF-8"?>
                     <svg id="_Слой_1" data-name="Слой_1" xmlns="http://www.w3.org/2000/svg" version="1.1"
@@ -107,22 +109,27 @@
                         </g>
                     </svg>
                 </a>
-                <ul id="loginList" class="navbar-nav justify-content-end align-items-center">
-                    <li class="nav-item">
-                        <a href="checkout.html">
-                            <button type="button">
-                                Checkout <span id="checkout"></span>
-                            </button>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="loginlogout" href="login.html" class="nav-link">Login</a>
-                    </li>
-                    <li id="loginListItem" class="nav-item">
-                        <a href="userdetails.html" class="nav-link">User Details</a>
-                    </li>
 
-                </ul>
+                <!-- 3. Right Section (Login/Checkout) -->
+                <div class="d-flex flex-row justify-content-end align-items-center">
+                    <ul id="loginList" class="navbar-nav flex-row justify-content-end align-items-center gap-3">
+                        <li class="nav-item">
+                            <a href="checkout.html">
+                                <button type="button">
+                                    Checkout <span id="checkout"></span>
+                                </button>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="loginlogout" href="login.html" class="nav-link">Login</a>
+                        </li>
+                        <li id="loginListItem" class="nav-item">
+                            <a href="userdetails.html" class="nav-link">User Details</a>
+                        </li>
+
+                    </ul>
+                </div>
+                
 
 
             </div>

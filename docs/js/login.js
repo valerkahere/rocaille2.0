@@ -25,8 +25,6 @@
     }
     event.preventDefault();
   }
-    
-
 })();
 
 
