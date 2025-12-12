@@ -13,7 +13,7 @@
     let password = document.getElementById('passwordID').value;
     if (email === 'example@gmail.com' && password === '202020')  {   
         // successful login, user redirected to shop.html
-        localStorage.setItem('loggedIn', 1);    
+        localStorage.setItem('loggedIn', '1');    
         window.location.href = 'shop.html';  // redirect to shop page
     }
     else {

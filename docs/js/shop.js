@@ -31,18 +31,19 @@ const buttonClassList = 'btn btn-primary mt-auto add-to-cart'; // margin-top aut
       renderCards(data, catalogueContainer, row);
 
       
-      
+      //
       let buttons = document.querySelectorAll('button.add-to-cart');
       buttons.forEach(button => {
         button.addEventListener('click', addItem);
       });
-      
+      //
       
 
       function addItem(event) {
         let total = localStorage.getItem('checkout');
         total++
         localStorage.setItem('checkout', total);
+        
         document.getElementById('checkout').textContent = total;
         
         // Now after cards are rendered, make sure all "add to carts" are counted
