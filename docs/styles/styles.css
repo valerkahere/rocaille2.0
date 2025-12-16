@@ -9,9 +9,40 @@
     /* Improves loading performance */
 }
 
+/* General Styles */
+/* Fonts and responsive font sizes */
 h1 {
     font-family: 'Borsok', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* 
+    - clamp creates a value that can go and shrink
+    - never goes beyond min or max value, always stays in-between
+     */
+    /* Combine vw with zoomable unit (rem) for accessibility */
+    font-size: clamp(2rem, 7vw + 1rem, 6rem);
+}
 
+h2 {
+
+}
+
+h3 {
+    
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+p {
+
+}
+
+small {
+    
 }
 
 body {
@@ -100,31 +131,32 @@ svg {
     stroke-width: 2.39px;
 }
 
-/* desktop - bootstrap lg */
-@media(min-width: 992px) {
-    .navbar-grid-container {
-        display: grid !important;
-        grid-template-columns: 1fr auto 1fr !important;
-        align-items: center !important;
-    }
-
-    .navbar-grid-container > div:nth-child(1) {
-        justify-self: start;
-        
-    }
-
-    .navbar-brand {
-        justify-self: center;
-        align-self: center;
-        margin-right: 0 !important;
-        margin-left: 0 !important;
-        /* Overriding Bootstrap's mx-auto */
-    }
-
-    .navbar-grid-container > div:last-child(1) {
-        justify-self: end;
-    }
+/* More specific styles for the smallest screens - Bootstrap extra small of <576px */
+/* CSS grid overriding bootstrap for centering the nav */
+.navbar-grid-container {
+    display: grid !important;
+    grid-template-columns: 1fr auto 1fr !important;
+    align-items: center !important;
 }
+
+.navbar-grid-container > div:nth-child(1) {
+    justify-self: start;
+    
+}
+
+.navbar-brand {
+    justify-self: center;
+    align-self: center;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    /* Overriding Bootstrap's mx-auto */
+}
+
+.navbar-grid-container > div:last-child(1) {
+    justify-self: end;
+}
+
+
 
 /* CSS grid standard layout for Shop page */
 .grid-container {
