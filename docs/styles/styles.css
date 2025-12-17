@@ -15,11 +15,14 @@
     --white-alt-creamy: #FFF9F9;
     --white-alt-yellowish: #FFFDF7;
     --soft-cta: #F2CAB6;
+    --stroke: #AEAEAE;
 
     --button-primary: #8a6c3d;
     --button-primary-hover:#3e301a;
     --button-secondary: #847256;
     --button-secondary-hover:#695331;
+
+    --gallery-max-width: 500px;
 
     scroll-behavior: smooth;
     box-sizing: border-box;
@@ -261,6 +264,30 @@ nav {
     
 }
 
+/* GALLERY of images CSS (more in media queries) */
+.main__gallery {
+    max-width: var(--gallery-max-width);
+}
+
+.main__gallery-wrapper img {
+    width: 100%;
+    
+    /* must set a specific size for object-fit to work */
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+
+    border: 1px solid var(--stroke);
+    border-radius: 8px;
+}
+
+
+
+/* Positions these images higher */
+picture > .img-move-upper {
+    object-position: 50% 85%;
+}
+
 
 /* SHOP page styles */
 
@@ -308,4 +335,25 @@ nav {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: var(--max-lines);
     line-clamp: var(--max-lines);
+}
+
+/* Media queries applied after all styles */
+/* 576px - bootstrap sm */
+@media(min-width: 576px) {
+    .main__gallery {
+        /* Simply changing the variable value and it's automatically applied from base styles */
+        --gallery-max-width: 700px;
+    }
+}
+
+@media (min-width: 768px) {
+    .main__gallery {
+        --gallery-max-width: 900px;
+    }
+}
+
+@media (min-width: 992px) {
+    .main__gallery {
+        --gallery-max-width: 1000px;
+    }
 }
