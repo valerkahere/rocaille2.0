@@ -72,6 +72,7 @@ body * {
     
 }
 
+/* This class only concerns itself with max-widths */
 .section {
     width: 100%;
     max-width: var(--gallery-max-width);
@@ -394,6 +395,9 @@ nav {
 picture > .img-move-upper {
     object-position: 50% 85%;
 }
+
+/* FOOTER */
+
 
 
 /* SHOP page styles */
