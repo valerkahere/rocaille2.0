@@ -18,7 +18,7 @@
 
     --button-primary: #8a6c3d;
     --button-primary-hover:#3e301a;
-    --button-secondary: #a08251;
+    --button-secondary: #847256;
     --button-secondary-hover:#695331;
 
     scroll-behavior: smooth;
@@ -103,8 +103,25 @@ b, strong {
 span {
     color: var(--primary-white);
 }
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 50%; /* Exact center of the window */
+    width: 1px;
+    background-color: red;
+    z-index: 10000; /* Sit on top of everything */
+    pointer-events: none; /* Let you click through it */
+}
 
 /* General Styles for components like buttons */
+button {
+    border: none;
+    padding: 0;
+}
+
+
 .btn-primary {
     background-color: var(--button-primary);
     color: var(--primary-white);
@@ -208,6 +225,28 @@ nav {
     background-color: var(--white-alt-creamy);
 }
 
+.navbar-grid-container {
+    display: grid !important;
+    grid-template-columns: 1fr auto 1fr !important;
+    align-items: center !important;
+}
+
+.navbar-grid-container > div:nth-child(1) {
+    justify-self: start;
+    
+}
+
+.navbar-brand {
+    justify-self: center;
+    align-self: center;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    /* Overriding Bootstrap's mx-auto */
+}
+
+.navbar-grid-container > div:last-child(1) {
+    justify-self: end;
+}
 
 
 
