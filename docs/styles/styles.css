@@ -201,7 +201,7 @@ button {
 }
 
 /* Below are custom svg classes imported from Adobe Illustrator and SVG settings */
-svg {
+#logo {
     width: clamp(7.5em, 15vw + 1rem, 11em);
 }
 
@@ -397,8 +397,14 @@ picture > .img-move-upper {
 }
 
 /* FOOTER */
+footer {
+    font-family: var(--main-roboto), var(--basic-font);
+}
 
-
+footer svg  {
+    width: clamp(1rem, 5vw + 1rem, 2rem);
+    height: clamp(1rem, 5vw + 1rem, 2rem);
+}
 
 /* SHOP page styles */
 
