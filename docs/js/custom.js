@@ -1,55 +1,60 @@
 (() => {
-    let loggingStatus = document.getElementById('loginlogout');
+    let loginLogoutEl = document.getElementById('loginlogout');
     let isLoggedIn = localStorage.getItem('loggedIn');
+
+    
+    let checkoutBtn = document.getElementById('checkout__btn');
+    checkoutBtn.addEventListener('click', checkoutClicked);
+
+
     // This is <ul> which wraps <li>
     let loginList = document.getElementById('loginList');
- 
+
     // This is the <li> which wraps <a> with text User Details
     let loginListItem = document.getElementById('loginListItem')
     // check if user is logged in or logged out..
     checkLoginStatus()
 
-    // set the checkout figure
-    if (typeof(localStorage.getItem('checkout')) === 'undefined' || localStorage.getItem('checkout') === null) { 
-        localStorage.setItem('checkout', '0');
-    }
-    let checkout = localStorage.getItem('checkout');
-    document.querySelector('#checkout').textContent = checkout;
-
-    
-
-
     // add a listener for log in / logout if such a button id is pressed
-    loggingStatus.addEventListener('click', handleLogging);
-    
+    loginLogoutEl.addEventListener('click', handleLogging);
+
     function checkLoginStatus() {
-        
+        // set the checkout figure
+        if (typeof (localStorage.getItem('checkout')) === 'undefined' || localStorage.getItem('checkout') === null) {
+                localStorage.setItem('checkout', '0');
+        }
+
         // If the Key does not exist, set it
-        if (typeof(isLoggedIn) === 'undefined' || isLoggedIn === null) {
+        if (typeof (isLoggedIn) === 'undefined' || isLoggedIn === null) {
             localStorage.setItem('loggedIn', '0');
-            
+
             isLoggedIn = localStorage.getItem('loggedIn');
         }
 
-        
-        
-        if (isLoggedIn === '1' ) {
+
+
+        if (isLoggedIn === '1') {
             // change the text from Login to Logout
-            loggingStatus.textContent = 'Logout';
+            loginLogoutEl.textContent = 'Logout';
             loginList.appendChild(loginListItem);
+            // Only if the user is registered, they can see the amount of products in cart
+            
+            let checkout = localStorage.getItem('checkout');
+
+            document.querySelector('#checkout').textContent = checkout;
         } else {
-            loggingStatus.textContent = 'Login';
+            loginLogoutEl.textContent = 'Login';
             // Removing the <li> - the "bullet" from the list together with its contents
             // ONLY IF <ul> does not have <li> removed ALREADY
-            
+
             loginList.removeChild(loginListItem);
 
 
-            
-        } 
+
+        }
 
     }
-    
+
     function handleLogging(event) {
         event.preventDefault();
         // if user is logged in them log them out and redirect to home page
@@ -62,8 +67,12 @@
         }
     }
 
-    
-    
+    function checkoutClicked() {
+        localStorage.setItem('checkoutBtn', '1');
+    }
+
+
+
 
 })();
 

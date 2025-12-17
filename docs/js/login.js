@@ -1,9 +1,26 @@
 // IIFE will execute on page load
 (() => {
-  // Initially hide the error element
+  // Initially hide the errors elements
   let loginError = document.getElementById('loginerror');
   loginError.classList.remove('d-block');
-  loginError.classList.add('d-none')
+  loginError.classList.add('d-none');
+
+  let checkoutError = document.getElementById('checkoutError');
+  checkoutError.classList.remove('d-block');
+  checkoutError.classList.add('d-none')
+
+  // Notify the user that they need to log in if they pressed checkout
+  if (localStorage.getItem('checkoutBtn') !== null && localStorage.getItem('checkoutBtn') === '1') {
+    checkoutError.classList.remove('d-none');
+    checkoutError.classList.add('d-block');
+    localStorage.setItem('checkoutBtn', '0');
+  } else {
+    localStorage.setItem('checkoutBtn', '0');
+  }
+
+
+  
+
   document.getElementById('user-login').addEventListener('submit', checkLogin)
   // wait for submit button to be clicked on login form - 
     // this code only invoked if login form submit button clicked

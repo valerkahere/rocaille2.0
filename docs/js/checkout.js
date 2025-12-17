@@ -130,7 +130,9 @@
 
     let loggedin = localStorage.getItem('loggedIn');
     if (loggedin === '0') {
+
         window.location.href = 'login.html';  // redirect to login page if not logged in
+        
     }
 
     checkout.addEventListener('click', completeCheckout)
