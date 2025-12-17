@@ -45,6 +45,10 @@ body {
     background-color: var(--primary-white);
 }
 
+main > * {
+    margin: 0 0 2em;
+}
+
 /* General Styles */
 /* This way override Bootstrap defaults */
 body * {
@@ -112,6 +116,17 @@ p {
     font-size: clamp(1rem, 1vw + 1rem, 1.25rem);
 }
 
+.display-paragraph {
+    /* equivalent to h5 */
+    font-size: clamp(1.25rem, 1.5vw + 1rem, 1.5rem);
+    font-weight: 400;
+}
+
+.display-heading {
+    /* equivalent to h4 */
+    font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
+}
+
 small {
     font-size: clamp(0.875rem, 1vw + 1rem, 1rem);
 }
@@ -124,7 +139,8 @@ span {
     color: var(--primary-white);
 }
 
-q {
+body q {
+    display: block;
     text-align: center;
     font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
 }
@@ -286,12 +302,42 @@ nav {
     
 }
 
-/* GALLERY of images CSS (more in media queries) */
-.main__gallery {
+/* Section for GALLERY of images CSS (more in media queries) */
+
+.section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin: 0 auto;
     max-width: var(--gallery-max-width);
+
+}
+
+.main__text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+/* To align with images
+    their spacing is set with bootstrap with margins */
+.main__text > * {
+    margin: 0 0.25em;
+}
+
+.row {
+    margin-top: 0; 
+    /* Negative margins caused overflow */
 }
 
 .main__gallery-wrapper img {
+
     width: 100%;
     
     /* must set a specific size for object-fit to work */
@@ -362,20 +408,20 @@ picture > .img-move-upper {
 /* Media queries applied after all styles */
 /* 576px - bootstrap sm */
 @media(min-width: 576px) {
-    .main__gallery {
+    .section {
         /* Simply changing the variable value and it's automatically applied from base styles */
         --gallery-max-width: 700px;
     }
 }
 
 @media (min-width: 768px) {
-    .main__gallery {
+    .section {
         --gallery-max-width: 900px;
     }
 }
 
 @media (min-width: 992px) {
-    .main__gallery {
+    .section {
         --gallery-max-width: 1000px;
     }
 }
