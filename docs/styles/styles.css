@@ -17,6 +17,8 @@
     --soft-cta: #F2CAB6;
     --stroke: #AEAEAE;
 
+    --banner: #eebdc8;
+
     --button-primary: #8a6c3d;
     --button-primary-hover:#3e301a;
     --button-secondary: #847256;
@@ -42,7 +44,7 @@
 }
 
 body {
-    background-color: var(--primary-white);
+    background-color: var(--white-alt-creamy);
 }
 
 main > * {
@@ -249,13 +251,14 @@ svg {
 
 /* HEADER */
 .banner {
+    background-color: var(--banner);
     font-family: var(--basic-font);
     /* 1.167vw because p is 6 times less h1 */
     font-size: clamp(1rem, 1.167vw + 1rem, 2.5rem);
     
     text-transform: uppercase;
     text-align: center;
-    background-color: var(--primary-white);
+
 }
 
 nav {
