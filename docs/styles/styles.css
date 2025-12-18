@@ -113,6 +113,7 @@ h2 {
 
 h3 {
     font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+    padding-top: 1.5rem;
 }
 
 h4 {
@@ -451,6 +452,12 @@ footer svg  {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: var(--max-lines);
     line-clamp: var(--max-lines);
+}
+
+/* About Us ordered list */
+.container ol li::marker {
+    /* size same as h3 = a bit smaller than h4 */
+    font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
 }
 
 /* Media queries applied after all styles */
