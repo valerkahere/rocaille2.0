@@ -396,6 +396,10 @@ footer {
     font-family: var(--main-roboto), var(--basic-font);
 }
 
+footer #subscribe {
+    font-family: var(--basic-font);
+}
+
 footer svg  {
     width: clamp(1rem, 5vw + 1rem, 2rem);
     height: clamp(1rem, 5vw + 1rem, 2rem);

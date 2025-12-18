@@ -2,10 +2,14 @@
     let loginLogoutEl = document.getElementById('loginlogout');
     let isLoggedIn = localStorage.getItem('loggedIn');
 
-    
+    // Functionality if checkout button pressed
     let checkoutBtn = document.getElementById('checkout__btn');
     checkoutBtn.addEventListener('click', checkoutClicked);
 
+    // Functionality for subscription to newsletter
+    let subscribeForm = document.getElementById('subscribeForm');
+    subscribeForm.addEventListener('submit', subscribeNewsletter)
+    
 
     // This is <ul> which wraps <li>
     let loginList = document.getElementById('loginList');
@@ -71,6 +75,12 @@
         localStorage.setItem('checkoutBtn', '1');
     }
 
+    function subscribeNewsletter(event) {
+        event.preventDefault();
+        console.log(true);
+        subscribeForm.classList.add('bg-success', 'text-white', 'fw-bold', 'p-2', 'border',  'border-success', 'rounded');
+        subscribeForm.textContent = 'You have been added to our newsletter'
+    }
 
 
 
