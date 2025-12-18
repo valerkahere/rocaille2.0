@@ -460,6 +460,7 @@ footer svg  {
     font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
 }
 
+
 /* Media queries applied after all styles */
 /* 576px - bootstrap sm */
 @media(min-width: 576px) {
