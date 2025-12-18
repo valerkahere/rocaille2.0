@@ -2,8 +2,8 @@
 const rowClassList = 'row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 justify-content-center my-1';
 const cardClassList = 'card h-100'; // h-100 makes tthem equal height!
 const cardBodyClassList = 'card-body vstack gap-1'; // vstack is shorthand for d-flex flex-column - vertical flex column
-const cardTitleClassList = 'card-title cutoff-text__title'; // cutoff-text - custom CSS class for controlling how many lines of text shown (alternative to JS substring)
-const cardTextClassList = 'card-subtitle cutoff-text__description';
+const cardTitleClassList = 'card-title text-start roboto cutoff-text__title'; // cutoff-text - custom CSS class for controlling how many lines of text shown (alternative to JS substring)
+const cardTextClassList = 'card-subtitle text-start cutoff-text__description';
 const smallTextClassList = 'text-body-secondary';
 const buttonClassList = 'btn btn-primary mt-auto add-to-cart'; // margin-top auto makes sure buttons are aligned in the bottom. add-to-cart is a custom class to target all cards buttons
 
@@ -69,7 +69,7 @@ const buttonClassList = 'btn btn-primary mt-auto add-to-cart'; // margin-top aut
 
           splitStoredChosenProducts.push(event.target.id);
           // Updating the value with each addition
-          
+
           localStorage.setItem('chosenProducts', splitStoredChosenProducts.toString()); // must convert array to string before saving in local storage
         }
         

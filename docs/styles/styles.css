@@ -406,32 +406,6 @@ footer svg  {
     height: clamp(1rem, 5vw + 1rem, 2rem);
 }
 
-/* SHOP page styles */
-
-/* CSS grid standard layout for Shop page */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto auto auto;
-    gap: 1em;
-}
-
-.header {
-  grid-column: 1 / -1;
-}
-
-.menu {
-  grid-row: 2 / 3;
-}
-
-.content {
-  grid-column: 2 / -1;
-}
-
-.footer {
-  grid-column: 1 / -1;
-}
-
 /* This is for the products to display nicely on shop page */
 
 .cutoff-text__title {

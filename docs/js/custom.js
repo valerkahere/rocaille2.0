@@ -77,7 +77,6 @@
 
     function subscribeNewsletter(event) {
         event.preventDefault();
-        console.log(true);
         subscribeForm.classList.add('bg-success', 'text-white', 'fw-bold', 'p-2', 'border',  'border-success', 'rounded');
         subscribeForm.textContent = 'You have been added to our newsletter'
     }
