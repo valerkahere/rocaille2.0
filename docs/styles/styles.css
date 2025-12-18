@@ -150,6 +150,10 @@ b, strong {
     font-weight: 400;
 }
 
+em {
+    font-weight: 700;
+}
+
 span {
     color: var(--primary-white);
 }
@@ -199,6 +203,15 @@ button {
     background-color: var(--button-secondary-hover);
     border-color: var(--button-secondary-hover);
 }
+
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    color: var(--primary-white);
+    background-color: var(--button-primary-hover);
+    border-color: var(--button-primary-hover);
+}
+
+
 
 /* Below are custom svg classes imported from Adobe Illustrator and SVG settings */
 #logo {
@@ -280,28 +293,10 @@ nav {
     background-color: var(--white-alt-creamy);
 }
 
-.navbar-grid-container {
-    display: grid !important;
-    grid-template-columns: 1fr auto 1fr !important;
-    align-items: center !important;
+.navbar>.container-fluid {
+    flex-wrap: nowrap;
 }
 
-.navbar-grid-container > div:nth-child(1) {
-    justify-self: start;
-    
-}
-
-.navbar-brand {
-    justify-self: center;
-    align-self: center;
-    margin-right: 0 !important;
-    margin-left: 0 !important;
-    /* Overriding Bootstrap's mx-auto */
-}
-
-.navbar-grid-container > div:last-child(1) {
-    justify-self: end;
-}
 
 /* HERO */
 .hero {
@@ -331,7 +326,7 @@ nav {
     
     --min: 320px;
     --calc: 50vw;
-    --max: 960px;
+    --max: 1080px;
     height: clamp(var(--min), var(--calc), var(--max));
 }
 
@@ -473,4 +468,37 @@ footer svg  {
     .section {
         --gallery-max-width: 1000px;
     }
+
+    .navbar-expand-lg .navbar-collapse {
+        display: block !important;
+        
+    }
+
+    .navbar-grid-container {
+    display: grid !important;
+    grid-template-columns: 1fr auto 1fr !important;
+    align-items: center !important;
+}
+
+header > .navbar > .container-fluid > .left-section {
+    grid-column: 1 / 2 !important;
+    grid-row: 1;
+    justify-self: start;
+}
+
+.navbar-brand {
+    grid-column: 2 / 3 !important;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    /* Overriding Bootstrap's mx-auto */
+}
+
+.right-section {
+    grid-column: 3 / 4 !important;
+    grid-row: 1;
+    justify-self: end;
+}
 }
