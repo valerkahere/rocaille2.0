@@ -1,8 +1,7 @@
 (async () => {
     const cardClassList = 'card h-100'; // h-100 makes tthem equal height!
     const cardBodyClassList = 'card-body vstack gap-1'; // vstack is shorthand for d-flex flex-column - vertical flex column
-    const cardTitleClassList = 'card-title cutoff-text__title'; // cutoff-text - custom CSS class for controlling how many lines of text shown (alternative to JS substring)
-    const cardTextClassList = 'card-subtitle cutoff-text__description';
+    const cardTitleClassList = 'card-title text-start roboto cutoff-text__title'; // cutoff-text - custom CSS class for controlling how many lines of text shown (alternative to JS substring)
     const smallTextClassList = 'text-body-secondary';
 
     function ApplyStyles(element, customClassList) {
@@ -13,7 +12,7 @@
     }
 
     // Starting with displaying filled in user details from localStorage
-    if (typeof(localStorage.userDetails) !== 'undefined' && localStorage.getItem('userDetails') !== null) {
+    if (typeof (localStorage.userDetails) !== 'undefined' && localStorage.getItem('userDetails') !== null) {
         const fName = document.getElementById("getFirstName");
         const lName = document.getElementById("getLastName");
         // const DOB = document.getElementById("dobID"); don't need dob at 
@@ -22,15 +21,15 @@
         const addressThree = document.getElementById("getAddress3");
 
         let userDetails = JSON.parse(localStorage.userDetails);
-        
+
         if (fName !== null) { // if element exists
             fName.value = userDetails.firstName;
         }
-        
+
         if (lName !== null) {
             lName.value = userDetails.lastName;
         }
-        
+
         if (addressOne !== null) {
             addressOne.value = userDetails.address1;
         }
@@ -38,27 +37,32 @@
         if (addressTwo !== null) {
             addressTwo.value = userDetails.address2;
         }
-        
+
         if (addressThree !== null) {
             addressThree.value = userDetails.address3;
         }
     }
 
+    const totalLabel = document.getElementById('total');
     const productCatalogue = document.getElementById('product-catalogue');
     const row = document.getElementById('cards-row');
-    if (typeof (productCatalogue) !== 'undefined') {
+
+
+
+    if (productCatalogue !== null) { // if the element exists
 
         productCatalogue.classList.remove('d-block');
         productCatalogue.classList.add('d-none');
-        
+
     }
-    if (typeof (row) !== 'undefined') {
+    if (row !== null) {
         row.classList.remove('d-block');
         row.classList.add('d-none');
         row.textContent = '';
     }
 
-    // Rendering chosen products
+    // Rendering chosen products if they exist
+    let total = 0; // this will keep the total price of all chosen products
     if (localStorage.getItem('chosenProducts') !== null) {
         let chosenProducts = localStorage.getItem('chosenProducts');
         // Enabling container and row back again
@@ -68,12 +72,12 @@
 
 
         let splitChosenProducts = chosenProducts.split(',');
-        console.log(splitChosenProducts);
         const response = await fetch('/assets/products.json');
         const data = await response.json();
-        console.log(data);
 
         let renderedIDs = []; // this will help to see if the ID has already been rendered
+        
+        totalLabel.classList.add('text-black')
         splitChosenProducts.forEach(id => {
             // if chosenID matches any one of JSON product IDs - render it
             // How to know if the id repeats?
@@ -87,7 +91,9 @@
             } else {
                 data.products.forEach(product => {
                     if (`${id.toString()}` === `${product.id.toString()}`) {
-                        // if equal, render an appropriate product
+                        // if equal, render an appropriate product and add its price to total (if it exists down below)
+
+
                         const col = document.createElement('div');
                         col.classList.add('col');
 
@@ -103,9 +109,6 @@
 
                         const cardTitle = document.createElement('h5');
                         ApplyStyles(cardTitle, cardTitleClassList);
-
-                        const cardText = document.createElement('p');
-                        ApplyStyles(cardText, cardTextClassList);
 
                         const cardPrice = document.createElement('small');
                         ApplyStyles(cardPrice, smallTextClassList);
@@ -125,11 +128,9 @@
                             cardTitle.textContent = product.productName;
                         }
 
-                        if (typeof (product.description) !== 'undefined' && product.description.length !== 0 && product.description !== "unknown") {
-                            cardText.textContent = product.description;
-                        }
-
                         if (typeof (product.price) !== 'undefined' && product.price.length !== 0 && product.price !== "unknown") {
+
+                            total += Number(product.price); // adding its price to total
                             if (product.currency === "EUR" && typeof (product.currency) !== 'undefined' && product.currency.length !== 0 && product.currency !== "unknown") {
                                 cardPrice.textContent = `${new Intl.NumberFormat(("IR"), {
                                     style: 'currency',
@@ -145,7 +146,6 @@
                         card.appendChild(cardBody);
                         cardBody.appendChild(image);
                         cardBody.appendChild(cardTitle);
-                        cardBody.appendChild(cardText);
                         cardBody.appendChild(cardPrice);
                     }
 
@@ -155,6 +155,13 @@
             // Add the ID to rendered in the end
             renderedIDs.push(id);
         });
+        // Finally displaying the total if it exists:
+        if (typeof(total) !== 'undefined') {
+            totalLabel.textContent = `${new Intl.NumberFormat(("IR"), {
+                style: 'currency',
+                currency: 'EUR'
+            }).format(total)}`
+        }
     }
 
     let checkout = document.getElementById('buy-now');
@@ -168,7 +175,7 @@
     if (loggedin === '0') {
 
         window.location.href = 'login.html';  // redirect to login page if not logged in
-        
+
     }
 
     checkout.addEventListener('click', completeCheckout)

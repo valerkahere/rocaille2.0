@@ -133,11 +133,12 @@
                 <form name="checkout" id="user-checkout">
                     <fieldset>
                         <!-- Delivery Details -->
-                         <legend>Delivery Details</legend>
-                         <div class="row g-3 mb-3">
+                        <legend>Delivery Details</legend>
+                        <div class="row g-3 mb-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="getFirstName" name="First name"required>
+                                    <input type="text" class="form-control" id="getFirstName" name="First name"
+                                        required>
                                     <label for="getFirstName">First Name <span class="text-danger">*</span></label>
                                 </div>
                             </div>
@@ -147,11 +148,11 @@
                                     <label for="getLastName">Last Name <span class="text-danger">*</span></label>
                                 </div>
                             </div>
-                         </div>
-                        
+                        </div>
 
 
-                        
+
+
 
 
                         <label for="getAddress1">Addresss</label>
@@ -194,12 +195,18 @@
 
 
         </div>
-        <div id="product-catalogue" class="container">
-            <div id="cards-row"
-                class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 justify-content-center my-1">
+        <section>
 
+            <div id="product-catalogue" class="container rounded-4 shadow-sm bg-white p-4 p-md-5">
+                <h3>Good choice!</h3>
+                <h4 class="roboto">Your total: <span id="total"></span></h4>
+                <div id="cards-row"
+                    class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 justify-content-center my-1">
+
+                </div>
             </div>
-        </div>
+        </section>
+
 
 
     </main>
