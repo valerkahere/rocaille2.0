@@ -48,20 +48,28 @@ const buttonClassList = 'btn btn-primary mt-auto add-to-cart'; // margin-top aut
         
         // Now after cards are rendered, make sure all "add to carts" are counted
         // if the button with a certain ID was clicked
-        // save thid ID to an array
+        // save this ID to an array
         // save the array to localStorage
 
         // if the array does not exist - create it
         // otherwise use the stored value
-        if (typeof(localStorage.getItem('chosenProducts')) === 'undefined' || localStorage.getItem('chosenProducts') === null || localStorage.getItem('chosenProducts') === '') {
-          var chosenProductsNew = [];
-          chosenProductsNew.push(event.target.id);
-          localStorage.setItem('chosenProducts', chosenProductsNew.toString());
-        } else {
+        if (localStorage.getItem('chosenProducts') === null || localStorage.getItem('chosenProducts') === '') { // if it's null or empty
+          let chosenProductsNew = [];
+          chosenProductsNew.push(event.target.id); // [5]
+          localStorage.setItem('chosenProducts', chosenProductsNew.toString()); // Put [5] AS A STRING in localStorage
+        } else { 
+          // we get string from localStorage
+          // convert string to array
+          // add a new id to array
+          // add array back to localStorage
+
           let storedChosenProducts = localStorage.getItem('chosenProducts');
+
           let splitStoredChosenProducts = storedChosenProducts.split(',');
+
           splitStoredChosenProducts.push(event.target.id);
           // Updating the value with each addition
+          
           localStorage.setItem('chosenProducts', splitStoredChosenProducts.toString()); // must convert array to string before saving in local storage
         }
         
@@ -102,8 +110,7 @@ function renderCards(data, catalogueContainer, row) {
       const image = document.createElement('img');
       image.classList.add('card-img-top');
       
-      const cardTitle = document.createElement('h5');
-      ApplyStyles(cardTitle, cardTitleClassList);
+      
 
       const cardText = document.createElement('p');
       ApplyStyles(cardText, cardTextClassList);
@@ -112,7 +119,10 @@ function renderCards(data, catalogueContainer, row) {
       cardButton.type = 'button';
       cardButton.textContent = "Add to cart";
       ApplyStyles(cardButton, buttonClassList);
-      cardButton.id = `${product.id}`; // assigning a product id for each button to see which ones are chosen
+      
+      cardButton.id = product.id; // assigning a product id for each button to see which ones are chosen
+      // <button id="1"></button>
+      // <button id="2"></button>
 
       const cardPrice = document.createElement('small');
       ApplyStyles(cardPrice, smallTextClassList);
@@ -127,6 +137,9 @@ function renderCards(data, catalogueContainer, row) {
       if (typeof(product.alt) !== 'undefined' && product.alt.length !== 0 && product.alt !== "unknown") {
         image.alt = product.alt;
       }
+
+      const cardTitle = document.createElement('h5');
+      ApplyStyles(cardTitle, cardTitleClassList);
 
       if (typeof(product.productName) !== 'undefined' && product.productName.length !== 0 && product.productName !== "unknown") {
         cardTitle.textContent = product.productName;

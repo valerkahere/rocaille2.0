@@ -27,7 +27,7 @@
     }
 
     // Rendering chosen products
-    if (typeof(localStorage.getItem('chosenProducts')) !== 'undefined' && localStorage.getItem('chosenProducts') !== null) {
+    if (localStorage.getItem('chosenProducts') !== null) {
         let chosenProducts = localStorage.getItem('chosenProducts');
         // Enabling container and row back again
         productCatalogue.classList.remove('d-none');
@@ -46,6 +46,10 @@
             // if chosenID matches any one of JSON product IDs - render it
             // How to know if the id repeats?
             // returns true if a string/array contains a specified string
+
+            // may include counter
+            // for id 1: - count how many times it appears IN THE splitChosenProducts
+            // products: 1, 2, 3...
             if (renderedIDs.includes(id)) {
                 // don't render
             } else {
