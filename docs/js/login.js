@@ -28,7 +28,7 @@
   function checkLogin(event) {
   let email = document.getElementById('emailAddressID').value;
     let password = document.getElementById('passwordID').value;
-    if (email === 'example@gmail.com' && password === '202020')  {   
+    if (email === 'example@gmail.com' && password === '123456')  {   
         // successful login, user redirected to shop.html
         localStorage.setItem('loggedIn', '1');    
         window.location.href = 'shop.html';  // redirect to shop page

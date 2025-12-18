@@ -9,7 +9,7 @@
     // Functionality for subscription to newsletter
     let subscribeForm = document.getElementById('subscribeForm');
     subscribeForm.addEventListener('submit', subscribeNewsletter)
-    
+
 
     // This is <ul> which wraps <li>
     let loginList = document.getElementById('loginList');
@@ -25,7 +25,7 @@
     function checkLoginStatus() {
         // set the checkout figure
         if (typeof (localStorage.getItem('checkout')) === 'undefined' || localStorage.getItem('checkout') === null) {
-                localStorage.setItem('checkout', '0');
+            localStorage.setItem('checkout', '0');
         }
 
         // If the Key does not exist, set it
@@ -42,10 +42,33 @@
             loginLogoutEl.textContent = 'Logout';
             loginList.appendChild(loginListItem);
             // Only if the user is registered, they can see the amount of products in cart
-            
+
             let checkout = localStorage.getItem('checkout');
 
             document.querySelector('#checkout').textContent = checkout;
+
+            // if the person is logged in, saving their details in localStorage FOR THE FIRST TIME just like in userdetails.js from userdetails.json
+            (async () => {
+                    try {
+                        if (typeof (localStorage.userDetails) === 'undefined' || localStorage.getItem('userDetails') === null) {
+                            const response = await fetch('/assets/userdetails.json');
+                            const data = await response.json();
+
+
+                            let userDetails = {}; // Then saving to Local Storage
+                            userDetails.firstName = data.firstName;
+                            userDetails.lastName = data.lastName;
+                            userDetails.dob = data.dob;
+                            userDetails.address1 = data.address1;
+                            userDetails.address2 = data.address2;
+                            userDetails.address3 = data.address3;
+                            localStorage.setItem('userDetails', JSON.stringify(userDetails));
+                        }
+                    }
+                    catch (error) {
+                        console.log(error);
+                    }
+            })();
         } else {
             loginLogoutEl.textContent = 'Login';
             // Removing the <li> - the "bullet" from the list together with its contents
@@ -77,7 +100,7 @@
 
     function subscribeNewsletter(event) {
         event.preventDefault();
-        subscribeForm.classList.add('bg-success', 'text-white', 'fw-bold', 'p-2', 'border',  'border-success', 'rounded');
+        subscribeForm.classList.add('bg-success', 'text-white', 'fw-bold', 'p-2', 'border', 'border-success', 'rounded');
         subscribeForm.textContent = 'You have been added to our newsletter'
     }
 

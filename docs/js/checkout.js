@@ -12,6 +12,38 @@
         });
     }
 
+    // Starting with displaying filled in user details from localStorage
+    if (typeof(localStorage.userDetails) !== 'undefined' && localStorage.getItem('userDetails') !== null) {
+        const fName = document.getElementById("getFirstName");
+        const lName = document.getElementById("getLastName");
+        // const DOB = document.getElementById("dobID"); don't need dob at 
+        const addressOne = document.getElementById("getAddress1");
+        const addressTwo = document.getElementById("getAddress2");
+        const addressThree = document.getElementById("getAddress3");
+
+        let userDetails = JSON.parse(localStorage.userDetails);
+        
+        if (fName !== null) { // if element exists
+            fName.value = userDetails.firstName;
+        }
+        
+        if (lName !== null) {
+            lName.value = userDetails.lastName;
+        }
+        
+        if (addressOne !== null) {
+            addressOne.value = userDetails.address1;
+        }
+
+        if (addressTwo !== null) {
+            addressTwo.value = userDetails.address2;
+        }
+        
+        if (addressThree !== null) {
+            addressThree.value = userDetails.address3;
+        }
+    }
+
     const productCatalogue = document.getElementById('product-catalogue');
     const row = document.getElementById('cards-row');
     if (typeof (productCatalogue) !== 'undefined') {
