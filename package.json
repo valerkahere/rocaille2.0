@@ -1,0 +1,21 @@
+{
+  "name": "rocaille2.0",
+  "version": "1.0.0",
+  "description": "First Package",
+  "homepage": "https://github.com/valerkahere/rocaille2.0#readme",
+  "bugs": {
+    "url": "https://github.com/valerkahere/rocaille2.0/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valerkahere/rocaille2.0.git"
+  },
+  "license": "ISC",
+  "author": "Valerii Navalnyi",
+  "type": "commonjs",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-handlebars": "^8.0.3"
+  }
+}
