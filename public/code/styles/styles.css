@@ -174,7 +174,7 @@ button {
 
 
 .btn-primary {
-    min-width: 100px;
+    min-height: 40px;
     background-color: var(--button-primary);
     color: var(--primary-white);
     border-color: var(--button-primary-hover)
@@ -190,7 +190,7 @@ button {
 }
 
 .btn-secondary {
-    min-width: 100px;
+    min-height: 40px;
     background-color: var(--button-secondary);
     border-color: var(--button-secondary-hover);
 }
@@ -293,10 +293,30 @@ button {
 nav {
     background-color: var(--white-alt-creamy);
 }
-
-.navbar>.container-fluid {
-    flex-wrap: nowrap;
+nav > div.container-fluid {
+    overflow: none;
 }
+
+.navbar-nav > li > a {
+    width: 100%;
+    min-height: 40px;
+    white-space: nowrap;
+}
+
+.navbar-grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar-collapse {
+    flex-basis: 100%; 
+    width: 100%;
+}
+
+
 
 
 /* HERO */
@@ -434,6 +454,21 @@ footer svg  {
     font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
 }
 
+/* Needed so buttons stretch to fill available space on very small screen */
+@media(max-width: 375px) {
+    div.flex-row {
+         flex: 1;
+    }
+    div.flex-row .navbar-nav {
+         flex: 1;
+    }
+    div.flex-row > .navbar-nav > .nav-item > .btn  {
+        width: 100%;
+    } 
+
+
+
+}
 
 /* Media queries applied after all styles */
 /* 576px - bootstrap sm */
@@ -460,31 +495,36 @@ footer svg  {
         
     }
 
+
+    .navbar-expand-lg .navbar-nav .nav-item a {
+        width: 100%;
+    }
+
     .navbar-grid-container {
-    display: grid !important;
-    grid-template-columns: 1fr auto 1fr !important;
-    align-items: center !important;
-}
+        display: grid !important;
+        grid-template-columns: 1fr auto 1fr !important;
+        align-items: center !important;
+    }
 
-header > .navbar > .container-fluid > .left-section {
-    grid-column: 1 / 2 !important;
-    grid-row: 1;
-    justify-self: start;
-}
+    header > .navbar > .container-fluid > .left-section {
+        grid-column: 1 / 2 !important;
+        grid-row: 1;
+        justify-self: start;
+    }
 
-.navbar-brand {
-    grid-column: 2 / 3 !important;
-    grid-row: 1;
-    justify-self: center;
-    align-self: center;
-    margin-right: 0 !important;
-    margin-left: 0 !important;
-    /* Overriding Bootstrap's mx-auto */
-}
+    .navbar-brand {
+        grid-column: 2 / 3 !important;
+        grid-row: 1;
+        justify-self: center;
+        align-self: center;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        /* Overriding Bootstrap's mx-auto */
+    }
 
-.right-section {
-    grid-column: 3 / 4 !important;
-    grid-row: 1;
-    justify-self: end;
-}
+    .right-section {
+        grid-column: 3 / 4 !important;
+        grid-row: 1;
+        justify-self: end;
+    }
 }
