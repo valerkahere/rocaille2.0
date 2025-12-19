@@ -138,52 +138,72 @@
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="text" class="form-control" id="getFirstName" name="First name"
-                                        required>
+                                        required placeholder="John">
                                     <label for="getFirstName">First Name <span class="text-danger">*</span></label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="getLastName" name="lastname" required>
+                                    <input type="text" class="form-control" id="getLastName" name="lastname" required placeholder="O'Donnel">
                                     <label for="getLastName">Last Name <span class="text-danger">*</span></label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-floating">
+                                    <input class="form-control" type="text" id="getAddress1" name="address1" placeholder="123 Street" required>
+                                    <label for="getAddress1">Address 1st <span class="text-danger">*</span></label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-floating">
+                                    <input class="form-control" type="text" id="getAddress2" name="address2" placeholder="Apt 4B" required>
+                                    <label for="getAddress2">Address 2nd <span class="text-danger">*</span></label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-floating">
+                                    <input class="form-control" type="text" id="getAddress3" name="address3" placeholder="City" required>
+                                    <label for="getAddress3">Address 3rd <span class="text-danger">*</span></label>
                                 </div>
                             </div>
                         </div>
 
-
-
-
-
-
-                        <label for="getAddress1">Addresss</label>
-                        <input type="text" id="getAddress1" name="address2" required>
-
-
-                        <label for="getAddress2">Addresss</label>
-                        <input type="text" id="getAddress2" name="address2" required>
-
-
-                        <label for="getAddress3">Addresss</label>
-                        <input type="text" id="getAddress3" name="address3" required>
-
-
                         <fieldset>
                             <legend>Payment Details</legend>
+                            <div class="row g-3 mb-3">
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input class="form-control" type="text" id="cardName" name="cardname" placeholder="Name on Card" required>
+                                        <label for="cardName">Card Name <span class="text-danger">*</span></label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input class="form-control" type="text" id="cardNumber" name="cardNumber" placeholder="0000 0000 0000 0000" required>
+                                        <label for="cardNumber">Card Number <span class="text-danger">*</span></label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input class="form-control" type="password" id="cardCvv" name="cardCvv" placeholder="123" required>
+                                        <label for="cardCvv">CVC <span class="text-danger">*</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
 
-                            <label for="getCardName">Card Name</label>
-                            <input type="text" id="cardName" name="cardname" required>
+                            
+                            
 
-                            <label for="getCardNumber">Card Number</label>
-                            <input type="text" id="cardNumber" name="cardNumber" required>
-
-                            <label for="getCardCVC">CVC</label>
-                            <input type="password" id="cardCvv" name="cardCvv" required>
+                            
+                            
                         </fieldset>
-                        <p id="payment-success" class="text-bg-success" role="alert">
+                        <p id="payment-success" class="bg-success text-white fw-bold p-2 border border-success rounded" role="alert">
                             Thank you for your purchase. You will receive delivery details via email. Please return to
-                            our <a href="shop.html">Shopping Page</a>.
+                            our <a class="text-white" href="shop.html">Shopping Page</a>.
                         </p>
-                        <p id="payment-failure" class="text-bg-warning" role="alert">
+                        <p id="payment-failure" class="roboto w-100 bg-warning text-dark fw-bolder p-3 mb-3 border border-2 border-dark rounded" role="alert">
                             Please enter correct card details
                         </p>
                         <div>
