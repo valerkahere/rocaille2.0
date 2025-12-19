@@ -88,9 +88,9 @@
         if (isLoggedIn === '1') {
             localStorage.setItem('loggedIn', '0');
 
-            window.location.href = "index.html";
+            window.location.href = "/";
         } else {
-            window.location.href = "login.html";
+            window.location.href = "/login";
         }
     }
 

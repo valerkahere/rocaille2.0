@@ -1,0 +1,117 @@
+<main>
+    <div class="container col-md-10 col-lg-6">
+        <section class="contact-form-section p-4 p-md-5 border rounded-4 shadow-sm bg-white">
+            <h2 class="roboto fw-bold">Checkout</h2>
+            <h3 class="roboto pb-4">Please fill in details below:</h3>
+            <form name="checkout" id="user-checkout">
+                <fieldset>
+                    <!-- Delivery Details -->
+                    <legend>Delivery Details</legend>
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="getFirstName" name="First name" required
+                                    placeholder="John">
+                                <label for="getFirstName">First Name <span class="text-danger">*</span></label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="getLastName" name="lastname" required
+                                    placeholder="O'Donnel">
+                                <label for="getLastName">Last Name <span class="text-danger">*</span></label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-floating">
+                                <input class="form-control" type="text" id="getAddress1" name="address1"
+                                    placeholder="123 Street" required>
+                                <label for="getAddress1">Address 1st <span class="text-danger">*</span></label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-floating">
+                                <input class="form-control" type="text" id="getAddress2" name="address2"
+                                    placeholder="Apt 4B" required>
+                                <label for="getAddress2">Address 2nd <span class="text-danger">*</span></label>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-floating">
+                                <input class="form-control" type="text" id="getAddress3" name="address3"
+                                    placeholder="City" required>
+                                <label for="getAddress3">Address 3rd <span class="text-danger">*</span></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <fieldset>
+                        <legend>Payment Details</legend>
+                        <div class="row g-3 mb-3">
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input class="form-control" type="text" id="cardName" name="cardname"
+                                        placeholder="Name on Card" required>
+                                    <label for="cardName">Card Name <span class="text-danger">*</span></label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input class="form-control" type="text" id="cardNumber" name="cardNumber"
+                                        placeholder="0000 0000 0000 0000" required>
+                                    <label for="cardNumber">Card Number <span class="text-danger">*</span></label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input class="form-control" type="password" id="cardCvv" name="cardCvv"
+                                        placeholder="123" required>
+                                    <label for="cardCvv">CVC <span class="text-danger">*</span></label>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+                    </fieldset>
+                    <p id="payment-success" class="bg-success text-white fw-bold p-2 border border-success rounded"
+                        role="alert">
+                        Thank you for your purchase. You will receive delivery details via email. Please return to
+                        our <a class="text-white" href="shop.html">Shopping Page</a>.
+                    </p>
+                    <p id="payment-failure"
+                        class="roboto w-100 bg-warning text-dark fw-bolder p-3 mb-3 border border-2 border-dark rounded"
+                        role="alert">
+                        Please enter correct card details
+                    </p>
+                    <div>
+                        <input type="submit" class="w-100 p-sm-4 p-md-3 btn btn-primary fw-bold" id="buy-now"
+                            name="buy-now" value="Buy Now">
+                    </div>
+            </form>
+        </section>
+
+
+
+    </div>
+    <section>
+
+        <div id="product-catalogue" class="container rounded-4 shadow-sm bg-white p-4 p-md-5">
+            <h3>Good choice!</h3>
+            <h4 class="roboto">Your total: <span id="total"></span></h4>
+            <div id="cards-row"
+                class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 justify-content-center my-1">
+
+            </div>
+        </div>
+    </section>
+
+
+
+</main>
+<script src="/code/js/checkout.js"></script>

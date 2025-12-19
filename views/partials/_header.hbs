@@ -16,7 +16,7 @@
 
                 <!-- 2. Center Section (Brand Logo and Name) -->
                 <!-- mx-auto is needed for mobile centering, Grid handles it on desktop -->
-                <a href="/docs/index.html" class="navbar-brand mx-auto">
+                <a href="/" class="navbar-brand mx-auto">
                     <?xml version="1.0" encoding="UTF-8"?>
                     <svg id="logo" data-name="logo" xmlns="http://www.w3.org/2000/svg" version="1.1"
                         viewBox="0 0 283.46 283.46">
@@ -83,10 +83,10 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-secondary" id="loginlogout" href="login.html" class="nav-link">Login</a>
+                            <a class="btn btn-secondary {{#if state.login}}active{{/if}}" id="loginlogout" href="/login" class="nav-link">Login</a>
                         </li>
                         <li id="loginListItem" class="nav-item">
-                            <a class="btn btn-secondary" href="userdetails.html" class="nav-link">User Details</a>
+                            <a class="btn btn-secondary {{#if state.userdetails}}active{{/if}}" href="/userdetails" class="nav-link">User Details</a>
                         </li>
 
                     </ul>

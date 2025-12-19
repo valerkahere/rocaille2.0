@@ -1,0 +1,35 @@
+<main>
+    <h1>Login</h1>
+    <section>
+        <div class="container col-md-10 col-lg-6">
+
+            <div role="alert"
+                class="roboto w-100 bg-warning text-dark fw-bolder p-3 mb-3 border border-2 border-dark rounded"
+                id="checkoutError">Please, log in before
+                proceeding to checkout</div>
+            <div role="alert" class="roboto w-100 bg-warning text-dark fw-bolder p-3 mb-3 border border-2 border-dark rounded" id="loginerror">The username or password you entered is
+                incorrect. Please, try again.</div>
+            <form class="d-flex flex-column gap-3" name="login" id="user-login" method="get">
+                <div class="form-group">
+                    <label for="emailAddressID">Email address</label>
+                    <input type="email" class="form-control" id="emailAddressID" name="email" required>
+                </div>
+                <div>
+                    <label for="passwordID">Password</label>
+                    <input type="password" class="form-control" id="passwordID" name="password" required>
+                </div>
+                <div>
+                    <input type="submit" class="fw-bold p-sm-4 p-md-3 w-100 btn btn-primary" value="Login">
+                </div>
+            </form>
+
+        </div>
+    </section>
+
+
+
+
+
+
+</main>
+<script src="/code/js/login.js"></script>

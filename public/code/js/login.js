@@ -31,7 +31,7 @@
     if (email === 'example@gmail.com' && password === '123456')  {   
         // successful login, user redirected to shop.html
         localStorage.setItem('loggedIn', '1');    
-        window.location.href = 'shop.html';  // redirect to shop page
+        window.location.href = '/shop';  // redirect to shop page
     }
     else {
         // login unsuccessful, error message appears

@@ -1,4 +1,5 @@
 (async () => {
+    console.log('ga');
     const cardClassList = 'card h-100'; // h-100 makes tthem equal height!
     const cardBodyClassList = 'card-body vstack gap-1'; // vstack is shorthand for d-flex flex-column - vertical flex column
     const cardTitleClassList = 'card-title text-start roboto cutoff-text__title'; // cutoff-text - custom CSS class for controlling how many lines of text shown (alternative to JS substring)
@@ -174,7 +175,7 @@
     let loggedin = localStorage.getItem('loggedIn');
     if (loggedin === '0') {
 
-        window.location.href = 'login.html';  // redirect to login page if not logged in
+        window.location.href = '/login';  // redirect to login page if not logged in
 
     }
 

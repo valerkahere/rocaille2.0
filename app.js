@@ -82,7 +82,7 @@ app.get('/contact', (req, res) => {
 });
 
 app.get('/checkout', (req, res) => {
-    const state = { 'home': false, 'checkout': true };
+    const state = { home : false, checkout: true };
     const head = {
       "title": "Secure Checkout - Rocaille Shop",
       "description": "Complete your purchase securely. Review your cart, enter shipping details, and finalize your order for handmade bead jewellery and keychains.",
@@ -93,7 +93,7 @@ app.get('/checkout', (req, res) => {
 });
 
 app.get('/login', (req, res) => {
-    const state = { 'home': false, 'login': true };
+    const state = { home : false, login: true };
     const head = {
       "title": "Login to Your Account - Rocaille Shop",
       "description": "Access your Rocaille shop account to view your order history, manage your personal details, and track your current purchases.",
@@ -104,7 +104,7 @@ app.get('/login', (req, res) => {
 });
 
 app.get('/userdetails', (req, res) => {
-    const state = { 'home': false, 'userDetails': true };
+    const state = { home : false, userdetails: true };
     const head = {
       "title": "Your Account Details - Rocaille Shop",
       "description": "View and manage your account information, including your order history, shipping addresses, and personal details at Rocaille shop.",
