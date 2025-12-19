@@ -1,6 +1,11 @@
 (async () => { // using async function to fetch saved user details from JSON
     try {
 
+        // Hiding user details success element first
+        let detailsUpdateSuccessEl = document.getElementById('details-success');
+        detailsUpdateSuccessEl.classList.remove('d-block');
+        detailsUpdateSuccessEl.classList.add('d-none');
+
         // Getting the elements
         const fName = document.getElementById("firstNameID");
         const lName = document.getElementById("lastNameID");
@@ -9,7 +14,7 @@
         const addressTwo = document.getElementById("address2ID");
         const addressThree = document.getElementById("address3ID");
         // If there is nothing in localStorage, load the data from JSON file
-        if (typeof (localStorage.userdetails) === 'undefined' || localStorage.getItem('userDetails') === null) {
+        if (typeof(localStorage.userDetails) === 'undefined' || localStorage.getItem('userDetails') === null) {
             const response = await fetch('/json/userdetails.json');
             const data = await response.json();
 
@@ -33,7 +38,7 @@
         } // else if localStorage exists...
         else {
             // First, convert local storage data string to a JS object
-            let userDetails = JSON.parse(localStorage.userdetails);
+            let userDetails = JSON.parse(localStorage.userDetails);
 
             // Then, assign the properties values of this JS object
             fName.value = userDetails.firstName;
@@ -44,8 +49,8 @@
             addressThree.value = userDetails.address3;
         }
 
-
-        document.getElementById('userdetailsForm').addEventListener('submit', updateUserDetails);
+        let userDetailsForm = document.getElementById('userdetailsForm');
+        userDetailsForm.addEventListener('submit', updateUserDetails);
 
         // to get the item from local storage use
         // localstorage.[keyName]
@@ -61,6 +66,11 @@
 
             localStorage.setItem('userDetails', JSON.stringify(userDetails));
 
+            // unhide success element
+            detailsUpdateSuccessEl.classList.remove('d-none');
+            detailsUpdateSuccessEl.classList.add('d-block');
+
+            
             event.preventDefault();
         }
     }
