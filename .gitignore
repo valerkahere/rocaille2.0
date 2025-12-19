@@ -8,3 +8,7 @@ notes/
 # ignoring vscode config files
 
 **vscode**
+
+# ignoring node modules
+**node_modules**
+**vs**
