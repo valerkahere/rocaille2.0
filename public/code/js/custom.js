@@ -51,7 +51,7 @@
             (async () => {
                     try {
                         if (typeof (localStorage.userDetails) === 'undefined' || localStorage.getItem('userDetails') === null) {
-                            const response = await fetch('/assets/userdetails.json');
+                            const response = await fetch('/json/userdetails.json');
                             const data = await response.json();
 
 

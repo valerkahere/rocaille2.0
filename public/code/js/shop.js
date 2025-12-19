@@ -25,7 +25,7 @@ const buttonClassList = 'btn btn-primary mt-auto add-to-cart'; // margin-top aut
 
       
 
-      const response = await fetch('/assets/products.json');
+      const response = await fetch('/json/products.json');
       const data = await response.json();
 
       renderCards(data, catalogueContainer, row);

@@ -73,7 +73,7 @@
 
 
         let splitChosenProducts = chosenProducts.split(',');
-        const response = await fetch('/assets/products.json');
+        const response = await fetch('/json/products.json');
         const data = await response.json();
 
         let renderedIDs = []; // this will help to see if the ID has already been rendered

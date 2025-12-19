@@ -10,7 +10,7 @@
         const addressThree = document.getElementById("address3ID");
         // If there is nothing in localStorage, load the data from JSON file
         if (typeof (localStorage.userdetails) === 'undefined' || localStorage.getItem('userDetails') === null) {
-            const response = await fetch('/assets/userdetails.json');
+            const response = await fetch('/json/userdetails.json');
             const data = await response.json();
 
 
@@ -65,8 +65,8 @@
         }
     }
     catch (error) {
-                        console.log(error);
-                    }
+        console.log(error);
+     }
 })();
 
 
