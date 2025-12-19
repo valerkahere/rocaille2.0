@@ -17,8 +17,6 @@
   } else {
     localStorage.setItem('checkoutBtn', '0');
   }
-
-
   
 
   document.getElementById('user-login').addEventListener('submit', checkLogin)
