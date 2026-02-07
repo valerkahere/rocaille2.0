@@ -12,3 +12,6 @@ notes/
 # ignoring node modules
 **node_modules**
 **vs**
+
+dist/
+.DS_Store
