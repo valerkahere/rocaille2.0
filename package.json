@@ -22,7 +22,10 @@
     "sass": "^1.97.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "sass src/scss:public/code/styles --source-map",
+    "watch:sass": "sass src/scss:public/code/styles --watch --source-map",
+    "build:sass": "sass src/scss:public/code/styles --no-source-map --style=compressed"
   },
   "keywords": []
 }
