@@ -24,7 +24,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile:sass": "sass src/scss:public/code/styles --source-map",
-    "watch:sass": "sass src/scss:public/code/styles --watch --source-map && sass src/scss:public/code/styles --style=compressed",
+    "watch:sass": "sass src/scss/styles.scss:public/code/styles/styles.min.css --watch --source-map --style=compressed",
     "build:sass": "sass src/scss:public/code/styles --no-source-map --style=compressed"
   },
   "keywords": []
